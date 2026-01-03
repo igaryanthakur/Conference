@@ -68,13 +68,13 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 16px;
-  padding: 12px 16px;
+  gap: 20px;
+  padding: 16px 24px;
 }
 
 .header .logo img,
 .header-logo {
-  width: 120px;
+  width: 180px;
   height: auto;
 }
 
@@ -83,7 +83,7 @@ body {
   text-align: center;
   font-weight: 700;
   color: var(--brand-blue);
-  font-size: 22px;
+  font-size: 28px;
 }
 
 .header .site-year {
@@ -100,10 +100,11 @@ body {
 
 .header .nav-link {
   color: var(--muted) !important;
-  margin: 0 8px;
+  margin: 0 10px;
   text-decoration: none;
   font-weight: 500;
-  padding: 8px 12px;
+  font-size: 16px;
+  padding: 10px 16px;
   transition: all 0.2s ease;
 }
 
@@ -146,13 +147,14 @@ body {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 .hero-tagline {
-  font-size: 22px;
-  color: rgba(255, 255, 255, 0.95);
+  font-size: 36px;
+  color: #ffffff;
   margin-bottom: 32px;
   line-height: 1.6;
   max-width: 900px;
   margin-left: auto;
   margin-right: auto;
+  font-weight: 500;
 }
 .btn-know-more {
   display: inline-block;
@@ -331,63 +333,6 @@ body {
 .footer p {
   color: var(--muted);
   font-size: 14px;
-}
-
-/* Responsive (limited): keep dynamic styling only for 15" and 18" laptop ranges */
-/* 15-inch laptops (approx 1200px - 1600px) */
-@media (min-width: 1200px) and (max-width: 1600px) {
-  .header .logo img {
-    width: 120px;
-  }
-  .hero-section {
-    min-height: 90vh;
-  }
-  .hero-title {
-    font-size: 36px;
-  }
-  .hero-code {
-    font-size: 52px;
-  }
-  .hero-tagline {
-    font-size: 18px;
-  }
-  .section-title {
-    font-size: 36px;
-  }
-  .stat-icon {
-    font-size: 40px;
-  }
-  .stat-number {
-    font-size: 30px;
-  }
-}
-
-/* 18-inch laptops / large desktop (approx 1601px - 2560px) */
-@media (min-width: 1601px) {
-  .header .logo img {
-    width: 140px;
-  }
-  .hero-section {
-    min-height: 100vh;
-  }
-  .hero-title {
-    font-size: 36px;
-  }
-  .hero-code {
-    font-size: 72px;
-  }
-  .hero-tagline {
-    font-size: 24px;
-  }
-  .section-title {
-    font-size: 48px;
-  }
-  .stat-icon {
-    font-size: 56px;
-  }
-  .stat-number {
-    font-size: 44px;
-  }
 }
 
 /* Accessibility focus styles */

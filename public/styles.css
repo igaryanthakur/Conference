@@ -740,4 +740,113 @@ a[href*="maps.app.goo.gl"]:hover {
   max-width: 100%;
 }
 
+/* ===================================
+   MEDIA QUERIES - Desktop/Laptop Only
+   =================================== */
+
+/* Large Desktop (1920px+) */
+@media (min-width: 1920px) {
+  .container {
+    max-width: 1800px;
+    margin: 0 auto;
+  }
+  
+  .hero-container {
+    max-width: 1600px;
+  }
+  
+  .header .logo {
+    margin-left: 8rem;
+  }
+}
+
+/* Standard Desktop (1440px - 1919px) */
+@media (min-width: 1440px) and (max-width: 1919px) {
+  .container {
+    max-width: 1320px;
+    margin: 0 auto;
+  }
+  
+  .hero-container {
+    max-width: 1400px;
+  }
+}
+
+/* Small Desktop (1366px - 1439px) */
+@media (min-width: 1366px) and (max-width: 1439px) {
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .hero-container {
+    max-width: 1280px;
+    gap: 2.5rem;
+  }
+  
+  .header .logo {
+    margin-left: 6rem;
+  }
+}
+
+/* Laptop (1280px - 1365px) */
+@media (min-width: 1280px) and (max-width: 1365px) {
+  .container {
+    max-width: 1140px;
+    margin: 0 auto;
+  }
+  
+  .hero-container {
+    max-width: 1200px;
+    gap: 2rem;
+  }
+  
+  .header .logo {
+    margin-left: 5rem;
+  }
+  
+  .hero-section {
+    padding: 2rem 2.5rem;
+  }
+}
+
+/* Small Laptop (1024px - 1279px) */
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
+  }
+  
+  .hero-container {
+    max-width: 1000px;
+    gap: 1.5rem;
+  }
+  
+  .header .logo {
+    margin-left: 3rem;
+  }
+  
+  .header .nav-link {
+    font-size: 0.875rem;
+    padding: 0.5rem 0.75rem;
+  }
+  
+  .hero-section {
+    padding: 1.5rem 2rem;
+    min-height: 70vh;
+  }
+  
+  .hero-main-title {
+    font-size: 1.75rem;
+  }
+  
+  .hero-code {
+    font-size: 2.5rem;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+}
+
 /* End of simplified stylesheet */

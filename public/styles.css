@@ -167,7 +167,7 @@ body {
 }
 
 .hero-main-title {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat", sans-serif !important;
   font-size: 36px;
   font-weight: 700;
   color: #ffffff;
@@ -176,7 +176,7 @@ body {
 }
 
 .hero-code {
-  font-family: "IBM Plex Sans", sans-serif;
+  font-family: "IBM Plex Sans", sans-serif !important;
   font-size: 64px;
   font-weight: 800;
   color: #f58634;
@@ -185,6 +185,7 @@ body {
 }
 
 .hero-theme {
+  font-family: "Montserrat", sans-serif !important;
   font-size: 20px;
   color: #ffffff;
   margin-bottom: 24px;
@@ -193,7 +194,7 @@ body {
 }
 
 .hero-dates {
-  font-family: "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif !important;
   font-size: 22px;
   color: #ffffff;
   margin-bottom: 20px;
@@ -202,7 +203,7 @@ body {
 }
 
 .hero-hybrid-mode {
-  font-family: "Times New Roman", Times, serif;
+  font-family: 'Montserrat', sans-serif !important;
   font-size: 22px;
   color: #ffffff;
   margin-bottom: 30px;

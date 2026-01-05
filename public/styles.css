@@ -126,46 +126,95 @@ body {
 /* Hero Section */
 .hero-section {
   position: relative;
-  min-height: 90vh; /* Change this value to adjust height */
+  width: 100%;
+  min-height: 80vh;
+  background: #004b87;
   display: flex;
   align-items: center;
-  justify-content: center;
-  background: url("/images/CAMPUS.jpg");
-  background-size: cover;
-  background-position: center;
+  padding: 40px 80px;
 }
 
-.hero-content {
-  position: relative;
-  z-index: 2;
-  padding: 0px 0px;
+.hero-container {
+  display: flex;
+  align-items: center;
+  gap: 60px;
   width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
 }
-.hero-title {
+
+.hero-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  color: #ffffff;
+  padding-right: 20px;
+}
+
+.hero-logos {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.hero-logo-img {
+  height: 70px;
+  width: auto;
+  object-fit: contain;
+  max-width: 200px;
+}
+
+.hero-main-title {
+  font-family: "Montserrat", sans-serif;
   font-size: 36px;
   font-weight: 700;
   color: #ffffff;
-  margin-bottom: 20px;
+  margin-bottom: 28px;
   line-height: 1.2;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
+
 .hero-code {
+  font-family: "IBM Plex Sans", sans-serif;
   font-size: 64px;
   font-weight: 800;
   color: #f58634;
   margin-bottom: 24px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  line-height: 1.1;
 }
-.hero-tagline {
-  font-size: 30px;
+
+.hero-theme {
+  font-size: 20px;
   color: #ffffff;
-  margin-bottom: 32px;
-  line-height: 1.6;
-  max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
+  margin-bottom: 24px;
+  line-height: 1.5;
   font-weight: 500;
 }
+
+.hero-dates {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 22px;
+  color: #ffffff;
+  margin-bottom: 20px;
+  line-height: 1.4;
+  font-weight: 500;
+}
+
+.hero-hybrid-mode {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 22px;
+  color: #ffffff;
+  margin-bottom: 30px;
+  font-weight: 400;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
 .btn-know-more {
   display: inline-block;
   padding: 14px 40px;
@@ -183,6 +232,108 @@ body {
   color: #ffffff;
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* .btn-hero {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 28px;
+  background: #000000;
+  color: #ffffff;
+  border-radius: 0;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 15px;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  min-width: 180px;
+}
+
+.btn-hero:hover {
+  background: #1a1a1a;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.btn-hero i {
+  font-size: 16px;
+  margin-right: 8px;
+} */
+
+.hero-right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 550px;
+}
+
+.hero-image {
+  width: 100%;
+  height: auto;
+  max-height: 650px;
+  object-fit: cover;
+  border-radius: 4px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+}
+
+/* Responsive Design for Hero Section */
+@media (max-width: 1024px) {
+  .hero-container {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .hero-left {
+    width: 100%;
+  }
+
+  .hero-right {
+    width: 100%;
+    min-height: 400px;
+  }
+
+  .hero-main-title {
+    font-size: 36px;
+  }
+
+  .hero-code {
+    font-size: 48px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 40px 24px;
+  }
+
+  .hero-main-title {
+    font-size: 28px;
+  }
+
+  .hero-code {
+    font-size: 40px;
+  }
+
+  .hero-theme {
+    font-size: 16px;
+  }
+
+  .hero-dates {
+    font-size: 18px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+
+  .btn-hero {
+    width: 100%;
+    justify-content: center;
+  }
 }
 
 /* Highlights Section */

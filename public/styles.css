@@ -740,6 +740,27 @@ a[href*="maps.app.goo.gl"]:hover {
   max-width: 100%;
 }
 
+/* Committee/Reviewer Initials Avatar (for people without photos) */
+.committee-avatar--initials {
+  width: clamp(120px, 12vw, 150px);
+  height: clamp(120px, 12vw, 150px);
+  border-radius: 50%;
+  border: clamp(3px, 0.3vw, 4px) solid var(--brand-blue);
+  box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.15);
+  display: grid;
+  place-items: center;
+  margin: 0 auto;
+  background: linear-gradient(135deg, rgba(0, 75, 135, 0.12), rgba(245, 134, 52, 0.12));
+}
+
+.committee-avatar--initials span {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  color: var(--brand-blue);
+  font-size: clamp(1.5rem, 2.5vw, 2.25rem);
+}
+
 /* ===================================
    MEDIA QUERIES - Desktop/Laptop Only
    =================================== */

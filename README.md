@@ -12,7 +12,6 @@ A dynamic website for the **International Conference on Nation-Building through 
 - **Express.js Backend**: Server-side rendering with EJS templates
 - **Bootstrap 5**: Modern UI framework with custom styling
 - **Dynamic Routing**: Easy to add new pages
-- **Registration System**: Form submission with JSON and Excel export capabilities
 - **Committee Member Profiles**: Display committee members with their photos
 - **Interactive UI Elements**: Hover effects on email and address links
 - **Multiple Conference Tracks**: Marketing, Finance, HR, Operations & SCM, IT, and General Management
@@ -24,15 +23,9 @@ A dynamic website for the **International Conference on Nation-Building through 
 Conference/
 ├── server.js              # Express server configuration
 ├── package.json           # Dependencies and scripts
-├── data/                  # Data storage
-│   ├── registrations.json # Registration data (JSON format)
-│   └── registrations.xlsx # Registration data (Excel format)
-├── utils/                 # Utility functions
-│   └── excel.js          # Excel export functionality
 ├── views/                 # EJS templates
 │   ├── index.ejs         # Main homepage with all sections
 │   ├── layout.ejs        # Reusable layout template
-│   ├── registration.ejs  # Registration page
 │   └── partials/         # Reusable components
 │       ├── head.ejs      # HTML head section
 │       ├── header.ejs    # Navigation header
@@ -84,8 +77,8 @@ The homepage includes the following sections:
 3. **About** - Conference overview, focus areas, and goals
 4. **Call for Papers** - Submission guidelines, tracks, and important dates
 5. **Organizing Committee** - Committee members with photos
-6. **Contact** - Venue and email contact information
-7. **Registration** - Registration form and fee structure
+6. **Registration Fees** - Fee structure information
+7. **Contact** - Venue and email contact information
 
 ## Conference Tracks
 
@@ -126,19 +119,9 @@ The homepage includes the following sections:
 - **EJS** - Embedded JavaScript Templates
 - **Bootstrap 5** - CSS framework
 - **Bootstrap Icons** - Icon library
-- **ExcelJS** - Excel file generation
 - **Helmet** - Security middleware
 - **Morgan** - HTTP request logger
 - **Compression** - Response compression
-
-## Registration System
-
-The website includes a registration system that:
-- Collects participant information
-- Stores data in JSON format
-- Exports data to Excel format
-- Validates form inputs
-- Supports multiple registration categories
 
 ## Quick Smoke Tests
 
@@ -149,7 +132,7 @@ After starting the server, verify the main pages respond with HTTP 200:
 # start in background (detach) then test
 Start-Process -NoNewWindow -FilePath node -ArgumentList server.js
 Invoke-WebRequest -UseBasicParsing http://localhost:3000/ | Select-Object StatusCode
-foreach ($p in '/','/registration') {
+foreach ($p in '/') {
   try { $r = Invoke-WebRequest -UseBasicParsing "http://localhost:3000$p"; "$p -> $($r.StatusCode)" } catch { "$p -> ERROR" }
 }
 ```
@@ -158,7 +141,7 @@ foreach ($p in '/','/registration') {
 ```bash
 # run dev (background) then test
 npm run dev &>/dev/null &
-for p in / /registration; do
+for p in /; do
   printf "%s -> " "$p"
   curl -s -o /dev/null -w "%{http_code}\n" http://localhost:3000"$p"
 done

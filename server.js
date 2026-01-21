@@ -7,29 +7,10 @@ const morgan = require("morgan");
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-const fs = require("fs").promises;
-
 // Parse request bodies
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// Data path for registrations
-const registrationsDir = path.join(__dirname, "data");
-const registrationsFile = path.join(registrationsDir, "registrations.json");
-
-async function ensureRegistrationsFile() {
-  try {
-    await fs.mkdir(registrationsDir, { recursive: true });
-    try {
-      await fs.access(registrationsFile);
-    } catch (e) {
-      await fs.writeFile(registrationsFile, "[]", "utf8");
-    }
-  } catch (err) {
-    console.error("Failed to ensure registrations file", err);
-  }
-}
-ensureRegistrationsFile();
 
 // Basic security and performance middleware
 app.disable("x-powered-by");
@@ -133,53 +114,6 @@ app.get("/committee", (req, res) => {
   });
 });
 
-// Registration page
-app.get("/registration", (req, res) => {
-  res.render("registration", {
-    title: "Registration - IC‑NBITS 2026",
-    pageTitle: "Registration",
-  });
-});
-
-// Accept registration POSTs
-const { writeRegistrationToExcel } = require("./utils/excel");
-app.post("/register", async (req, res) => {
-  const { fullName, email, affiliation, category, mode, comments } =
-    req.body || {};
-  if (!fullName || !email || !category) {
-    return res
-      .status(400)
-      .json({ success: false, message: "Missing required fields" });
-  }
-
-  const entry = {
-    id: Date.now(),
-    fullName: String(fullName).trim(),
-    email: String(email).trim(),
-    affiliation: affiliation ? String(affiliation).trim() : "",
-    category: String(category),
-    mode: mode || "",
-    comments: comments || "",
-    createdAt: new Date().toISOString(),
-  };
-
-  try {
-    await ensureRegistrationsFile();
-    const raw = await fs.readFile(registrationsFile, "utf8");
-    const list = JSON.parse(raw || "[]");
-    list.push(entry);
-    await fs.writeFile(
-      registrationsFile,
-      JSON.stringify(list, null, 2),
-      "utf8"
-    );
-    await writeRegistrationToExcel(entry);
-    return res.json({ success: true, entry });
-  } catch (err) {
-    console.error("Failed to save registration", err);
-    return res.status(500).json({ success: false, message: "Server error" });
-  }
-});
 
 // Contact page
 app.get("/contact", (req, res) => {

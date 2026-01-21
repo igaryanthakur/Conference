@@ -111,6 +111,24 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     }, observerOptions);
 
+    // Generic reveal-on-scroll system (CSS class based)
+    const revealObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            // one-time reveal for performance
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.12, rootMargin: "0px 0px -80px 0px" }
+    );
+
+    document.querySelectorAll(".reveal").forEach((el) => {
+      revealObserver.observe(el);
+    });
+
     // Observe statistics items for scroll animation
     document.querySelectorAll(".stat-item").forEach((item) => {
       item.style.opacity = "0";
@@ -132,6 +150,9 @@ document.addEventListener("DOMContentLoaded", function () {
       item.style.opacity = "1";
       item.style.transform = "translateY(0)";
     });
+    document.querySelectorAll(".reveal").forEach((el) => {
+      el.classList.add("is-visible");
+    });
   }
 
   // Initialize animations on page load
@@ -146,6 +167,14 @@ document.addEventListener("DOMContentLoaded", function () {
         if (rect.top < window.innerHeight && rect.bottom > 0) {
           item.style.opacity = "1";
           item.style.transform = "translateY(0)";
+        }
+      });
+
+      // Reveal anything already in viewport
+      document.querySelectorAll(".reveal").forEach((el) => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight && rect.bottom > 0) {
+          el.classList.add("is-visible");
         }
       });
     }, 100);

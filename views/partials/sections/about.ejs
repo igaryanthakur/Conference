@@ -1,6 +1,5 @@
 <!-- ===================================
-     EMERGENCY FIX - ABOUT SECTION WITH INLINE CSS
-     Use this if external CSS is not loading
+     ABOUT SECTION WITH INLINE CSS
      =================================== -->
 
 <style>
@@ -13,13 +12,22 @@
 
 .about-welcome-box {
   display: grid;
-  grid-template-columns: 1fr 1.5fr;
+  grid-template-columns: 1fr 1fr;
   gap: 3rem;
   background: linear-gradient(135deg, #004b87 0%, #0066b2 100%);
   border-radius: 1.5rem;
   padding: 3.5rem 3rem;
   margin-bottom: 4rem;
   box-shadow: 0 1.5rem 4rem rgba(0, 75, 135, 0.3);
+  align-items: center;
+}
+
+.about-welcome-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .about-welcome-badge {
@@ -60,9 +68,10 @@
 
 .about-welcome-text {
   color: rgba(255, 255, 255, 0.95);
-  font-size: 1.1rem;
-  line-height: 1.7;
+  font-size: 1.15rem;
+  line-height: 1.8;
   margin: 0 0 1.5rem 0;
+  text-align: justify;
 }
 
 .about-welcome-text strong {
@@ -70,37 +79,28 @@
   font-weight: 700;
 }
 
-.about-welcome-stats {
-  display: flex;
-  gap: 1.5rem;
-  flex-wrap: wrap;
+.about-section-header {
+  font-size: 3rem;
+  font-weight: 900;
+  color: #004b87;
+  text-align: center;
+  margin-bottom: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  position: relative;
+  padding-bottom: 1rem;
 }
 
-.about-stat-mini {
-  display: flex;
-  align-items: center;
-  gap: 0.625rem;
-  background: rgba(255, 255, 255, 0.1);
-  padding: 0.75rem 1.25rem;
-  border-radius: 2rem;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  transition: all 0.3s ease;
-}
-
-.about-stat-mini:hover {
-  background: rgba(255, 255, 255, 0.15);
-  transform: translateY(-3px);
-}
-
-.about-stat-mini i {
-  font-size: 1.5rem;
-  color: #f58634;
-}
-
-.about-stat-mini span {
-  color: #fff;
-  font-weight: 600;
-  font-size: 1rem;
+.about-section-header::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 5px;
+  background: linear-gradient(90deg, #004b87, #f58634, #004b87);
+  border-radius: 3px;
 }
 
 .about-content-section {
@@ -626,6 +626,9 @@
 <section id="about" class="about-section">
   <div class="container">
     
+    <!-- ABOUT HEADER -->
+    <h1 class="about-section-header">About</h1>
+    
     <!-- WELCOME BOX -->
     <div class="about-welcome-box">
       <div class="about-welcome-left">
@@ -638,161 +641,16 @@
       
       <div class="about-welcome-right">
         <p class="about-welcome-text">
-          India's aspiration of <strong>Viksit Bharat</strong> forms the foundation of IC‑NBITS 2026. 
-          We explore how innovation, technology and sustainability can collectively drive inclusive growth, 
-          strengthen institutions and enable responsible leadership for nation‑building.
+          Rooted in a rich legacy of academic excellence and social commitment, the <strong>South Indian Education Society (SIES)</strong>, established in 1932, has consistently upheld the belief that education and research are powerful instruments of nation-building. Guided by this enduring philosophy, <strong>SIES College of Management Studies (SIESCOMS)</strong>, Navi Mumbai, since its inception in 1995, has been committed to nurturing responsible leaders, advancing scholarly inquiry, and contributing meaningfully to society through high-quality research and knowledge dissemination.
         </p>
-        <div class="about-welcome-stats">
-          <div class="about-stat-mini">
-            <i class="bi bi-lightbulb-fill"></i>
-            <span>Innovation</span>
-          </div>
-          <div class="about-stat-mini">
-            <i class="bi bi-cpu-fill"></i>
-            <span>Technology</span>
-          </div>
-          <div class="about-stat-mini">
-            <i class="bi bi-globe"></i>
-            <span>Sustainability</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- ABOUT THE INSTITUTE -->
-    <div class="about-content-section">
-      <h2 class="about-section-title">
-        <i class="bi bi-building"></i>
-        About the Institute
-      </h2>
-      
-      <div class="about-content-card">
-        <div class="about-card-body">
-          <!-- SIES Information -->
-          <div class="about-institute-intro">
-            <h3 class="about-institute-name">South Indian Education Society (SIES)</h3>
-            <p class="about-text">
-              Established in <strong>1932</strong>, SIES is a value-based educational trust that manages 
-              several educational institutes in Mumbai and Navi Mumbai, acclaimed for its strong foundation 
-              of cultural values and ethos.
-            </p>
-          </div>
-
-          <div class="about-divider"></div>
-
-          <!-- SIESCOMS Information -->
-          <div class="about-institute-details">
-            <h3 class="about-institute-name">SIES College of Management Studies (SIESCOMS)</h3>
-            <p class="about-text">
-              Established in <strong>1995</strong> and affiliated to the University of Mumbai, SIESCOMS 
-              offers higher education programs including Masters in Management Studies (MMS), Masters in 
-              Computer Applications (MCA), and PhD in Management Studies and Computer Applications.
-            </p>
-            
-            <div class="about-programs-grid">
-              <div class="about-program-card">
-                <i class="bi bi-briefcase-fill"></i>
-                <h4>MMS Program</h4>
-                <p>Two-year full-time management program approved by AICTE, offering specializations in Marketing, Finance, Operations, Systems & Human Resources</p>
-              </div>
-              
-              <div class="about-program-card">
-                <i class="bi bi-code-slash"></i>
-                <h4>MCA Program</h4>
-                <p>Two-year full-time program introduced in 2001, approved by AICTE, New Delhi and accredited by NBA</p>
-              </div>
-            </div>
-
-            <div class="about-accreditation">
-              <i class="bi bi-award-fill"></i>
-              <span>Both MMS and MCA programs are <strong>accredited by the National Board of Accreditation (NBA)</strong>, New Delhi</span>
-            </div>
-          </div>
-
-          <div class="about-divider"></div>
-
-          <!-- Vision & Mission -->
-          <div class="about-vision-mission">
-            <div class="about-vm-card about-vm-vision">
-              <div class="about-vm-icon">
-                <i class="bi bi-eye-fill"></i>
-              </div>
-              <div class="about-vm-content">
-                <h4>Our Vision</h4>
-                <p>To be one of the preferred business schools in India</p>
-              </div>
-            </div>
-
-            <div class="about-vm-card about-vm-mission">
-              <div class="about-vm-icon">
-                <i class="bi bi-bullseye"></i>
-              </div>
-              <div class="about-vm-content">
-                <h4>Our Mission</h4>
-                <ul>
-                  <li>Provide education that equips students with knowledge, skills and attitude meeting industry expectations</li>
-                  <li>Develop critical thinking and innovative skills through experiential learning and applied research</li>
-                  <li>Instill and nurture sense of ethics and values in students</li>
-                  <li>Impart leadership and collaborative skills with high professional competence</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <!-- Core Values - Streamlined -->
-          <div class="about-values-section">
-            <h4 class="about-values-title">Our Core Values</h4>
-            <div class="about-values-grid">
-              <div class="about-value-item">
-                <div class="about-value-icon">
-                  <i class="bi bi-gem"></i>
-                </div>
-                <h5>Integrity</h5>
-                <p>Fair, honest and transparent conduct in all endeavors</p>
-              </div>
-
-              <div class="about-value-item">
-                <div class="about-value-icon">
-                  <i class="bi bi-star-fill"></i>
-                </div>
-                <h5>Excellence</h5>
-                <p>Striving for outstanding performance in every task</p>
-              </div>
-
-              <div class="about-value-item">
-                <div class="about-value-icon">
-                  <i class="bi bi-people-fill"></i>
-                </div>
-                <h5>Responsibility</h5>
-                <p>Accountability and ownership of our actions</p>
-              </div>
-
-              <div class="about-value-item">
-                <div class="about-value-icon">
-                  <i class="bi bi-award"></i>
-                </div>
-                <h5>Respect</h5>
-                <p>Valuing dignity and diversity of every individual</p>
-              </div>
-
-              <div class="about-value-item">
-                <div class="about-value-icon">
-                  <i class="bi bi-heart-fill"></i>
-                </div>
-                <h5>Passion</h5>
-                <p>Dedication towards holistic growth and development</p>
-              </div>
-
-              <div class="about-value-item">
-                <div class="about-value-icon">
-                  <i class="bi bi-emoji-smile-fill"></i>
-                </div>
-                <h5>Humility</h5>
-                <p>Modesty and grace in all achievements</p>
-              </div>
-            </div>
-          </div>
-        </div>
+        
+        <p class="about-welcome-text">
+          Aligned with this vision, SIESCOMS is organizing the International Research Conference on <strong>"Nation-Building through Innovation, Technology and Sustainability"</strong>, envisioned as a global academic and professional forum dedicated to exploring how innovative thinking, technological advancement, and sustainable practices can collectively contribute to inclusive and resilient nation-building. The conference seeks to bring together researchers, academicians, policymakers, industry professionals, entrepreneurs, and development practitioners from across the world to exchange ideas, present cutting-edge research, and share best practices that support national progress in an increasingly interconnected and rapidly changing world.
+        </p>
+        
+        <p class="about-welcome-text" style="margin-bottom: 0;">
+          In the 21st century, nation-building extends beyond economic growth to encompass social equity, environmental responsibility, technological preparedness, and institutional strength. This conference recognizes that while innovation and technology serve as powerful enablers of development, their true impact can be realized only when guided by sustainability principles. By integrating these dimensions, the conference aims to foster meaningful dialogue and actionable insights toward building nations that are economically robust, socially inclusive, environmentally responsible, and technologically empowered.
+        </p>
       </div>
     </div>
 

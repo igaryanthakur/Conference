@@ -151,3 +151,399 @@ document.addEventListener("DOMContentLoaded", function () {
     }, 100);
   });
 });
+/* =========================================================================
+   HERO GALLERY JAVASCRIPT - ADD TO END OF YOUR main.js
+   Professional auto-rotating gallery functionality
+   ========================================================================= */
+
+// Wrap in DOMContentLoaded to ensure DOM is ready
+document.addEventListener("DOMContentLoaded", function () {
+  
+  // ========================================
+  // HERO GALLERY CONFIGURATION
+  // ========================================
+  
+  const heroGallery = {
+    slides: document.querySelectorAll(".hero-gallery-slide"),
+    dots: document.querySelectorAll(".hero-gallery-dot"),
+    prevBtn: document.querySelector(".hero-gallery-prev"),
+    nextBtn: document.querySelector(".hero-gallery-next"),
+    wrapper: document.querySelector(".hero-gallery-wrapper"),
+    currentIndex: 0,
+    autoPlayInterval: null,
+    autoPlayDelay: 5000, // 5 seconds - professional pacing
+    isTransitioning: false,
+  };
+
+  // Exit gracefully if gallery elements not found
+  if (
+    !heroGallery.slides.length ||
+    !heroGallery.dots.length ||
+    !heroGallery.prevBtn ||
+    !heroGallery.nextBtn ||
+    !heroGallery.wrapper
+  ) {
+    // Gallery not on this page - exit silently
+    return;
+  }
+
+  // ========================================
+  // CORE GALLERY FUNCTIONS
+  // ========================================
+
+  /**
+   * Show specific slide with professional transition
+   * @param {number} index - Slide index to display
+   */
+  function showSlide(index) {
+    // Prevent rapid transitions
+    if (heroGallery.isTransitioning) return;
+
+    // Handle index wrapping
+    if (index < 0) {
+      index = heroGallery.slides.length - 1;
+    } else if (index >= heroGallery.slides.length) {
+      index = 0;
+    }
+
+    // Lock transitions
+    heroGallery.isTransitioning = true;
+
+    // Remove active states
+    heroGallery.slides[heroGallery.currentIndex].classList.remove("active");
+    heroGallery.dots[heroGallery.currentIndex].classList.remove("active");
+
+    // Update index
+    heroGallery.currentIndex = index;
+
+    // Add active states
+    heroGallery.slides[heroGallery.currentIndex].classList.add("active");
+    heroGallery.dots[heroGallery.currentIndex].classList.add("active");
+
+    // Unlock after transition completes (matches CSS duration)
+    setTimeout(() => {
+      heroGallery.isTransitioning = false;
+    }, 1200);
+
+    // Reset auto-play timer
+    resetAutoPlay();
+  }
+
+  /**
+   * Navigate to next slide
+   */
+  function nextSlide() {
+    showSlide(heroGallery.currentIndex + 1);
+  }
+
+  /**
+   * Navigate to previous slide
+   */
+  function prevSlide() {
+    showSlide(heroGallery.currentIndex - 1);
+  }
+
+  // ========================================
+  // AUTO-PLAY CONTROL
+  // ========================================
+
+  /**
+   * Start automatic slideshow
+   */
+  function startAutoPlay() {
+    stopAutoPlay(); // Clear any existing interval
+    heroGallery.autoPlayInterval = setInterval(
+      nextSlide,
+      heroGallery.autoPlayDelay
+    );
+  }
+
+  /**
+   * Stop automatic slideshow
+   */
+  function stopAutoPlay() {
+    if (heroGallery.autoPlayInterval) {
+      clearInterval(heroGallery.autoPlayInterval);
+      heroGallery.autoPlayInterval = null;
+    }
+  }
+
+  /**
+   * Reset auto-play timer (restart countdown)
+   */
+  function resetAutoPlay() {
+    stopAutoPlay();
+    startAutoPlay();
+  }
+
+  /**
+   * Pause and resume after user interaction
+   */
+  function pauseAndResume() {
+    stopAutoPlay();
+    // Resume after 10 seconds of inactivity (professional UX)
+    setTimeout(startAutoPlay, 10000);
+  }
+
+  // ========================================
+  // EVENT LISTENERS
+  // ========================================
+
+  // Navigation Buttons
+  heroGallery.nextBtn.addEventListener("click", function (e) {
+    e.preventDefault();
+    nextSlide();
+    pauseAndResume();
+  });
+
+  heroGallery.prevBtn.addEventListener("click", function (e) {
+    e.preventDefault();
+    prevSlide();
+    pauseAndResume();
+  });
+
+  // Progress Dots
+  heroGallery.dots.forEach((dot, index) => {
+    dot.addEventListener("click", function (e) {
+      e.preventDefault();
+      showSlide(index);
+      pauseAndResume();
+    });
+  });
+
+  // ========================================
+  // KEYBOARD NAVIGATION
+  // ========================================
+
+  document.addEventListener("keydown", function (e) {
+    if (!heroGallery.wrapper) return;
+
+    // Check if gallery is visible in viewport
+    const rect = heroGallery.wrapper.getBoundingClientRect();
+    const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
+
+    if (isVisible) {
+      if (e.key === "ArrowLeft") {
+        e.preventDefault();
+        prevSlide();
+        pauseAndResume();
+      } else if (e.key === "ArrowRight") {
+        e.preventDefault();
+        nextSlide();
+        pauseAndResume();
+      }
+    }
+  });
+
+  // ========================================
+  // HOVER BEHAVIOR (Desktop Only)
+  // ========================================
+
+  // Pause on hover for desktop users (professional UX)
+  if (window.matchMedia("(min-width: 768px)").matches) {
+    heroGallery.wrapper.addEventListener("mouseenter", function () {
+      stopAutoPlay();
+    });
+
+    heroGallery.wrapper.addEventListener("mouseleave", function () {
+      startAutoPlay();
+    });
+  }
+
+  // ========================================
+  // VISIBILITY CHANGE (Performance)
+  // ========================================
+
+  // Pause when tab is hidden (saves battery & performance)
+  document.addEventListener("visibilitychange", function () {
+    if (document.hidden) {
+      stopAutoPlay();
+    } else {
+      startAutoPlay();
+    }
+  });
+
+  // ========================================
+  // TOUCH/SWIPE SUPPORT (Mobile)
+  // ========================================
+
+  let touchStartX = 0;
+  let touchEndX = 0;
+  let touchStartY = 0;
+  let touchEndY = 0;
+
+  heroGallery.wrapper.addEventListener(
+    "touchstart",
+    function (e) {
+      touchStartX = e.changedTouches[0].screenX;
+      touchStartY = e.changedTouches[0].screenY;
+    },
+    { passive: true }
+  );
+
+  heroGallery.wrapper.addEventListener(
+    "touchend",
+    function (e) {
+      touchEndX = e.changedTouches[0].screenX;
+      touchEndY = e.changedTouches[0].screenY;
+      handleSwipe();
+    },
+    { passive: true }
+  );
+
+  /**
+   * Handle swipe gestures
+   */
+  function handleSwipe() {
+    const swipeThreshold = 50;
+    const horizontalDiff = touchStartX - touchEndX;
+    const verticalDiff = Math.abs(touchStartY - touchEndY);
+
+    // Only trigger if horizontal swipe is dominant (not vertical scroll)
+    if (
+      Math.abs(horizontalDiff) > swipeThreshold &&
+      verticalDiff < swipeThreshold
+    ) {
+      if (horizontalDiff > 0) {
+        // Swiped left - next slide
+        nextSlide();
+      } else {
+        // Swiped right - previous slide
+        prevSlide();
+      }
+      pauseAndResume();
+    }
+  }
+
+  // ========================================
+  // IMAGE PRELOADING (Performance)
+  // ========================================
+
+  /**
+   * Preload next image for smoother transitions
+   */
+  function preloadNextImage() {
+    const nextIndex =
+      (heroGallery.currentIndex + 1) % heroGallery.slides.length;
+    const nextSlide = heroGallery.slides[nextIndex];
+    const nextImg = nextSlide?.querySelector(".hero-gallery-img");
+
+    if (nextImg && nextImg.src) {
+      const img = new Image();
+      img.src = nextImg.src;
+    }
+  }
+
+  // Preload periodically
+  preloadNextImage();
+  setInterval(preloadNextImage, heroGallery.autoPlayDelay);
+
+  // ========================================
+  // INITIALIZE GALLERY
+  // ========================================
+
+  // Start auto-play
+  startAutoPlay();
+
+  // Console feedback (can be removed in production)
+  console.log("✨ Hero Gallery: Initialized successfully");
+  console.log(`📸 Slides: ${heroGallery.slides.length}`);
+  console.log(`⏱️  Auto-play: ${heroGallery.autoPlayDelay / 1000}s interval`);
+  
+
+  // ========================================
+  // END OF HERO GALLERY SCRIPT
+  // ========================================
+});
+/* ===================================
+   CONFERENCE TABS JAVASCRIPT
+   Add this to the END of your script.js file
+   =================================== */
+
+document.addEventListener("DOMContentLoaded", function () {
+  
+  // Get all tab buttons and tab panes
+  const tabButtons = document.querySelectorAll('.conference-tab-btn');
+  const tabPanes = document.querySelectorAll('.tab-pane');
+
+  // Exit if no tabs found (not on this page)
+  if (!tabButtons.length || !tabPanes.length) return;
+
+  // Function to switch tabs
+  function switchTab(targetTab) {
+    // Remove active class from all buttons
+    tabButtons.forEach(btn => btn.classList.remove('active'));
+    
+    // Remove active class from all tab panes
+    tabPanes.forEach(pane => pane.classList.remove('active'));
+    
+    // Add active class to clicked button
+    const activeButton = document.querySelector(`[data-tab="${targetTab}"]`);
+    if (activeButton) {
+      activeButton.classList.add('active');
+    }
+    
+    // Show corresponding tab content
+    const activePane = document.getElementById(`${targetTab}-tab`);
+    if (activePane) {
+      activePane.classList.add('active');
+    }
+
+    // Smooth scroll to tabs section (optional)
+    const highlightsSection = document.getElementById('highlights');
+    if (highlightsSection && window.scrollY > highlightsSection.offsetTop) {
+      highlightsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+
+  // Add click event listeners to all tab buttons
+  tabButtons.forEach(button => {
+    button.addEventListener('click', function() {
+      const targetTab = this.getAttribute('data-tab');
+      switchTab(targetTab);
+    });
+  });
+
+  // Optional: Support keyboard navigation
+  tabButtons.forEach((button, index) => {
+    button.addEventListener('keydown', function(e) {
+      let newIndex = index;
+
+      // Arrow right or down - next tab
+      if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+        e.preventDefault();
+        newIndex = (index + 1) % tabButtons.length;
+      }
+      
+      // Arrow left or up - previous tab
+      if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+        e.preventDefault();
+        newIndex = (index - 1 + tabButtons.length) % tabButtons.length;
+      }
+
+      // Switch to new tab and focus
+      if (newIndex !== index) {
+        const newButton = tabButtons[newIndex];
+        const targetTab = newButton.getAttribute('data-tab');
+        switchTab(targetTab);
+        newButton.focus();
+      }
+    });
+  });
+
+  // Optional: URL hash support (e.g., #pre-conference)
+  function checkUrlHash() {
+    const hash = window.location.hash.substring(1); // Remove #
+    if (hash === 'pre-conference' || hash === 'conference') {
+      switchTab(hash);
+    }
+  }
+
+  // Check on page load
+  checkUrlHash();
+
+  // Check when hash changes
+  window.addEventListener('hashchange', checkUrlHash);
+
+  console.log('✅ Conference tabs initialized successfully');
+});

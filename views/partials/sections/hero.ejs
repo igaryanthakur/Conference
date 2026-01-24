@@ -1,53 +1,139 @@
-    <!-- Hero Section -->
-    <section id="home" class="hero-section">
-      <div class="hero-container">
-        <div class="hero-left">
-          <!-- Conference Title -->
-          <h1 class="hero-main-title">
-            International Research Conference <br> on <br> Nation-Building <br> through Innovation,
-            Technology and Sustainability
-          </h1>
+<!-- Hero Section with Professional Auto-Rotating Gallery -->
+<section id="home" class="hero-section">
+  <div class="hero-container">
+    <!-- Left Content Column (Your existing content - unchanged) -->
+    <div class="hero-left">
+      <!-- Conference Title -->
+      <h1 class="hero-main-title">
+        International Research Conference on Nation-Building through Innovation,
+        Technology and Sustainability
+      </h1>
 
-          <!-- Conference Code -->
-          <h2 class="hero-code">IC‑NBITS 2026</h2>
+      <!-- Conference Code -->
+      <h2 class="hero-code">IC‑NBITS 2026</h2>
 
-          <!-- Dates and Venue -->
-          <p class="hero-dates">
-            <strong>13th-14th March, 2026</strong>
-          </p>
+      <!-- Dates and Venue -->
+      <p class="hero-dates">
+        <strong>13th-14th March, 2026</strong>
+      </p>
 
-          <!-- Hybrid Mode Text -->
-          <p class="hero-hybrid-mode">Hybrid Mode</p>
+      <!-- Hybrid Mode Text -->
+      <p class="hero-hybrid-mode">Hybrid Mode</p>
 
-          <p class="hero-theme">
-            <strong
-              >Publication Opportunities in SCOPUS / ABDC listed journals Conference Proceeding with ISBN number</strong
-            >
-          </p>
+      <p class="hero-theme">
+        <strong>Publication Opportunities in SCOPUS / ABDC listed journals Conference Proceeding with ISBN number</strong>
+      </p>
 
-          <p class="hero-theme" style="text-align: justify">
-            The Microsoft CMT service was used for managing the peer-reviewing
-            process for this conference. This service was provided for free by
-            Microsoft and they bore all expenses, including costs for Azure
-            cloud services as well as for software development and support
-          </p>
+      <p class="hero-theme" style="text-align: justify">
+        The Microsoft CMT service was used for managing the peer-reviewing
+        process for this conference. This service was provided for free by
+        Microsoft and they bore all expenses, including costs for Azure
+        cloud services as well as for software development and support
+      </p>
 
-          <!-- CTA Buttons -->
-          <div class="hero-buttons">
-            <a href="#" class="btn-hero btn-know-more">
-              <i class="bi bi-download me-2"></i>Brochure
-            </a>
-            <a href="#highlights" class="btn-hero btn-know-more"> Know More </a>
+      <!-- CTA Buttons -->
+      <div class="hero-buttons">
+        <a href="#" class="btn-hero btn-know-more">
+          <i class="bi bi-download me-2"></i>Brochure
+        </a>
+        <a href="#highlights" class="btn-hero btn-know-more"> Know More </a>
+      </div>
+    </div>
+
+    <!-- Right Gallery Column (NEW: Professional Auto-Rotating Gallery) -->
+    <div class="hero-right">
+      <div class="hero-gallery-wrapper">
+        <!-- Gallery Slides Container -->
+        <div class="hero-gallery-track">
+          <!-- Slide 1 -->
+          <div class="hero-gallery-slide active">
+            <img
+              src="/images/Con20251.jpeg"
+              alt="IC-NBITS 2026 Conference - Image 1"
+              class="hero-gallery-img"
+            />
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="hero-gallery-slide">
+            <img
+              src="/images/Con20252.jpeg"
+              alt="IC-NBITS 2026 Conference - Image 2"
+              class="hero-gallery-img"
+            />
+          </div>
+
+          <!-- Slide 3 -->
+          <div class="hero-gallery-slide">
+            <img
+              src="/images/Con20253.jpeg"
+              alt="IC-NBITS 2026 Conference - Image 3"
+              class="hero-gallery-img"
+            />
+          </div>
+
+          <!-- Slide 4 -->
+          <div class="hero-gallery-slide">
+            <img
+              src="/images/Con20254.png"
+              alt="IC-NBITS 2026 Conference - Image 4"
+              class="hero-gallery-img"
+            />
           </div>
         </div>
 
-        <div class="hero-right">
-          <img
-            src="/images/CAMPUS.jpg"
-            alt="Conference Venue"
-            class="hero-image"
-          />
+        <!-- Gradient Overlay (adds depth) -->
+        <div class="hero-gallery-gradient"></div>
+
+        <!-- Navigation Controls Container -->
+        <div class="hero-gallery-controls">
+          <!-- Previous Button -->
+          <button 
+            class="hero-gallery-arrow hero-gallery-prev" 
+            aria-label="Previous image"
+            type="button"
+          >
+            <i class="bi bi-chevron-left"></i>
+          </button>
+
+          <!-- Next Button -->
+          <button 
+            class="hero-gallery-arrow hero-gallery-next" 
+            aria-label="Next image"
+            type="button"
+          >
+            <i class="bi bi-chevron-right"></i>
+          </button>
+
+          <!-- Progress Indicators (Dots) -->
+          <div class="hero-gallery-dots">
+            <button 
+              class="hero-gallery-dot active" 
+              data-slide="0" 
+              aria-label="View image 1"
+              type="button"
+            ></button>
+            <button 
+              class="hero-gallery-dot" 
+              data-slide="1" 
+              aria-label="View image 2"
+              type="button"
+            ></button>
+            <button 
+              class="hero-gallery-dot" 
+              data-slide="2" 
+              aria-label="View image 3"
+              type="button"
+            ></button>
+            <button 
+              class="hero-gallery-dot" 
+              data-slide="3" 
+              aria-label="View image 4"
+              type="button"
+            ></button>
+          </div>
         </div>
       </div>
-    </section>
-
+    </div>
+  </div>
+</section>

@@ -1,194 +1,915 @@
-    <!-- About Section Head -->
-    <section id="Aboutsec" class="padding">
-      <div class="container">
-        <h2 class="section-title">About the Conference</h2>
+<!-- ===================================
+     EMERGENCY FIX - ABOUT SECTION WITH INLINE CSS
+     Use this if external CSS is not loading
+     =================================== -->
 
-        <div class="row justify-content-center mb-5">
-          <div class="col-lg-10">
-            <div class="card shadow-sm border-0 mb-4">
-              <div class="card-body p-5">
-                <p
-                  class="mb-4"
-                  style="
-                    font-size: 1.1rem;
-                    line-height: 1.8;
-                    text-align: justify;
-                  "
-                >
-                  The International Research Conference on Nation-Building through
-                  Innovation, Technology and Sustainability is a global academic
-                  and professional forum dedicated to exploring how innovative
-                  thinking, technological advancement, and sustainable practices
-                  can collectively contribute to inclusive and resilient
-                  nation-building. The conference aims to bring together
-                  researchers, academicians, policymakers, industry
-                  professionals, entrepreneurs, and development practitioners
-                  from around the world to share knowledge, research findings,
-                  and best practices that support national progress in an
-                  increasingly interconnected and rapidly changing world. In the
-                  21st century, nation-building extends beyond economic growth
-                  to include social equity, environmental responsibility,
-                  technological readiness, and institutional strength. This
-                  conference recognizes that innovation and technology are
-                  powerful enablers of development, but their true impact can
-                  only be realized when aligned with sustainability principles.
-                  By integrating these dimensions, the conference seeks to
-                  foster dialogue on building nations that are economically
-                  strong, socially inclusive, environmentally sustainable, and
-                  technologically empowered.
-                </p>
+<style>
+/* About Section Inline Styles */
+.about-section {
+  background: linear-gradient(135deg, #f9f8f4 0%, #fdfcf9 100%);
+  padding: 4rem 0;
+  position: relative;
+}
+
+.about-welcome-box {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 3rem;
+  background: linear-gradient(135deg, #004b87 0%, #0066b2 100%);
+  border-radius: 1.5rem;
+  padding: 3.5rem 3rem;
+  margin-bottom: 4rem;
+  box-shadow: 0 1.5rem 4rem rgba(0, 75, 135, 0.3);
+}
+
+.about-welcome-badge {
+  background: rgba(245, 134, 52, 0.15);
+  color: #f58634;
+  padding: 0.5rem 1.25rem;
+  border-radius: 2rem;
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  width: fit-content;
+  border: 2px solid rgba(245, 134, 52, 0.3);
+}
+
+.about-welcome-title {
+  font-size: 4rem;
+  font-weight: 900;
+  color: #fff;
+  line-height: 1.1;
+  margin: 0;
+}
+
+.about-year {
+  color: #f58634;
+  display: block;
+  font-size: 5rem;
+  margin-top: 0.25rem;
+}
+
+.about-welcome-subtitle {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-top: 0.75rem;
+}
+
+.about-welcome-text {
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin: 0 0 1.5rem 0;
+}
+
+.about-welcome-text strong {
+  color: #f58634;
+  font-weight: 700;
+}
+
+.about-welcome-stats {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.about-stat-mini {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0.75rem 1.25rem;
+  border-radius: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.about-stat-mini:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-3px);
+}
+
+.about-stat-mini i {
+  font-size: 1.5rem;
+  color: #f58634;
+}
+
+.about-stat-mini span {
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.about-content-section {
+  margin-bottom: 4rem;
+}
+
+.about-section-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #004b87;
+  text-align: center;
+  margin-bottom: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.about-section-title i {
+  color: #f58634;
+  font-size: 2.25rem;
+}
+
+.about-content-card {
+  background: #fff;
+  border-radius: 1.5rem;
+  box-shadow: 0 0.5rem 2rem rgba(0, 75, 135, 0.08);
+  transition: all 0.4s ease;
+}
+
+.about-content-card:hover {
+  box-shadow: 0 1rem 3rem rgba(0, 75, 135, 0.15);
+  transform: translateY(-5px);
+}
+
+.about-card-body {
+  padding: 4rem 3.5rem;
+}
+
+.about-text {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: #4a5568;
+  margin-bottom: 1.5rem;
+}
+
+.about-text strong {
+  color: #004b87;
+  font-weight: 700;
+}
+
+.about-institute-name {
+  font-size: 1.625rem;
+  font-weight: 700;
+  color: #004b87;
+  margin-bottom: 1rem;
+}
+
+.about-divider {
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(0, 75, 135, 0.1), transparent);
+  margin: 3rem 0;
+}
+
+.about-programs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.about-program-card {
+  background: linear-gradient(135deg, #f0f7ff 0%, #e6f0f7 100%);
+  padding: 2rem;
+  border-radius: 1rem;
+  border-left: 4px solid #004b87;
+  transition: all 0.3s ease;
+}
+
+.about-program-card:hover {
+  transform: translateX(5px);
+  box-shadow: 0 8px 20px rgba(0, 75, 135, 0.12);
+}
+
+.about-program-card i {
+  font-size: 2.5rem;
+  color: #f58634;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.about-program-card h4 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #004b87;
+  margin-bottom: 0.75rem;
+}
+
+.about-program-card p {
+  font-size: 0.95rem;
+  color: #4a5568;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.about-accreditation {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: linear-gradient(135deg, #fff8f0 0%, #fff4e6 100%);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  border-left: 4px solid #f58634;
+  margin-top: 2rem;
+}
+
+.about-accreditation i {
+  font-size: 2rem;
+  color: #f58634;
+}
+
+.about-accreditation strong {
+  color: #f58634;
+  font-weight: 700;
+}
+
+.about-vision-mission {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.about-vm-card {
+  background: #fff;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 75, 135, 0.08);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-vm-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+}
+
+.about-vm-vision::before {
+  background: linear-gradient(90deg, #004b87, #0066b2);
+}
+
+.about-vm-mission::before {
+  background: linear-gradient(90deg, #f58634, #e66428);
+}
+
+.about-vm-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 1rem 2.5rem rgba(0, 75, 135, 0.15);
+}
+
+.about-vm-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  font-size: 1.75rem;
+}
+
+.about-vm-vision .about-vm-icon {
+  background: linear-gradient(135deg, rgba(0, 75, 135, 0.1), rgba(0, 102, 178, 0.1));
+  color: #004b87;
+}
+
+.about-vm-mission .about-vm-icon {
+  background: linear-gradient(135deg, rgba(245, 134, 52, 0.1), rgba(230, 100, 40, 0.1));
+  color: #f58634;
+}
+
+.about-vm-content h4 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.about-vm-vision .about-vm-content h4 {
+  color: #004b87;
+}
+
+.about-vm-mission .about-vm-content h4 {
+  color: #f58634;
+}
+
+.about-vm-content p {
+  font-size: 1.05rem;
+  color: #4a5568;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.about-vm-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.about-vm-content ul li {
+  font-size: 0.95rem;
+  color: #4a5568;
+  line-height: 1.7;
+  margin-bottom: 0.75rem;
+  padding-left: 1.75rem;
+  position: relative;
+}
+
+.about-vm-content ul li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #f58634;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.about-values-section {
+  margin-top: 3rem;
+}
+
+.about-values-title {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: #004b87;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.about-values-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.about-value-item {
+  text-align: center;
+  padding: 1.5rem;
+  background: linear-gradient(135deg, #f9f8f4 0%, #fdfcf9 100%);
+  border-radius: 1rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.about-value-item:hover {
+  background: linear-gradient(135deg, #e6f0f7 0%, #f0f7ff 100%);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 75, 135, 0.1);
+}
+
+.about-value-icon {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 1rem;
+  background: linear-gradient(135deg, #004b87, #0066b2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.about-value-item:hover .about-value-icon {
+  background: linear-gradient(135deg, #f58634, #e66428);
+  transform: scale(1.1) rotate(10deg);
+}
+
+.about-value-item h5 {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #004b87;
+  margin-bottom: 0.5rem;
+}
+
+.about-value-item p {
+  font-size: 0.875rem;
+  color: #6b7280;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.about-conference-text {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: #4a5568;
+  margin-bottom: 1.5rem;
+  text-align: justify;
+}
+
+.about-conference-highlight {
+  background: linear-gradient(135deg, #f0f7ff 0%, #e6f0f7 100%);
+  border-left: 4px solid #004b87;
+  padding: 2rem;
+  border-radius: 1rem;
+  margin: 2.5rem 0;
+  position: relative;
+}
+
+.about-conference-highlight i {
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  font-size: 3rem;
+  color: rgba(0, 75, 135, 0.1);
+}
+
+.about-conference-highlight p {
+  font-size: 1.05rem;
+  color: #4a5568;
+  line-height: 1.8;
+  margin: 0;
+  padding-left: 3rem;
+  font-style: italic;
+}
+
+.about-pillars-section {
+  margin: 3rem 0;
+}
+
+.about-pillars-title {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: #004b87;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.about-pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.about-pillar-card {
+  text-align: center;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 75, 135, 0.08);
+  transition: all 0.4s ease;
+}
+
+.about-pillar-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 1.5rem 3rem rgba(0, 75, 135, 0.15);
+}
+
+.about-pillar-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 1.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 2rem;
+  transition: all 0.3s ease;
+}
+
+.about-pillar-card:hover .about-pillar-icon {
+  transform: scale(1.15) rotate(10deg);
+}
+
+.about-pillar-card h5 {
+  font-size: 1.375rem;
+  font-weight: 700;
+  color: #004b87;
+  margin-bottom: 1rem;
+}
+
+.about-pillar-card p {
+  font-size: 0.95rem;
+  color: #6b7280;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.about-goals-section {
+  margin: 3rem 0;
+}
+
+.about-goals-title {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: #004b87;
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.about-goals-list {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.about-goal-item {
+  display: flex;
+  gap: 1.5rem;
+  background: linear-gradient(135deg, #f9f8f4 0%, #fdfcf9 100%);
+  padding: 2rem;
+  border-radius: 1rem;
+  transition: all 0.3s ease;
+}
+
+.about-goal-item:hover {
+  background: #fff;
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 75, 135, 0.1);
+  transform: translateX(10px);
+}
+
+.about-goal-number {
+  flex-shrink: 0;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #004b87, #0066b2);
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 800;
+  transition: all 0.3s ease;
+}
+
+.about-goal-item:hover .about-goal-number {
+  background: linear-gradient(135deg, #f58634, #e66428);
+  transform: scale(1.1) rotate(-10deg);
+}
+
+.about-goal-content h5 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #004b87;
+  margin-bottom: 0.5rem;
+}
+
+.about-goal-content p {
+  font-size: 0.95rem;
+  color: #6b7280;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.about-cta-box {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  background: linear-gradient(135deg, #f58634, #e66428);
+  padding: 2.5rem;
+  border-radius: 1.5rem;
+  margin-top: 3rem;
+  box-shadow: 0 1rem 2.5rem rgba(245, 134, 52, 0.3);
+}
+
+.about-cta-box i {
+  font-size: 3rem;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.about-cta-content h4 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.about-cta-content p {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.95);
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .about-welcome-box {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .about-vision-mission,
+  .about-programs-grid,
+  .about-pillars-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 767px) {
+  .about-welcome-title { font-size: 2rem; }
+  .about-year { font-size: 2.5rem; }
+  .about-card-body { padding: 2rem 1.5rem; }
+  .about-values-grid { grid-template-columns: repeat(2, 1fr); }
+  .about-cta-box { flex-direction: column; text-align: center; }
+  .about-goal-item { flex-direction: column; text-align: center; }
+}
+
+@media (max-width: 575px) {
+  .about-values-grid { grid-template-columns: 1fr; }
+  .about-section-title { font-size: 1.5rem; }
+}
+</style>
+
+<!-- NOW THE HTML STARTS -->
+<section id="about" class="about-section">
+  <div class="container">
+    
+    <!-- WELCOME BOX -->
+    <div class="about-welcome-box">
+      <div class="about-welcome-left">
+        <div class="about-welcome-badge">WELCOME TO</div>
+        <h1 class="about-welcome-title">
+          IC-NBITS <span class="about-year">2026</span>
+        </h1>
+        <p class="about-welcome-subtitle">International Research Conference</p>
+      </div>
+      
+      <div class="about-welcome-right">
+        <p class="about-welcome-text">
+          India's aspiration of <strong>Viksit Bharat</strong> forms the foundation of IC‑NBITS 2026. 
+          We explore how innovation, technology and sustainability can collectively drive inclusive growth, 
+          strengthen institutions and enable responsible leadership for nation‑building.
+        </p>
+        <div class="about-welcome-stats">
+          <div class="about-stat-mini">
+            <i class="bi bi-lightbulb-fill"></i>
+            <span>Innovation</span>
+          </div>
+          <div class="about-stat-mini">
+            <i class="bi bi-cpu-fill"></i>
+            <span>Technology</span>
+          </div>
+          <div class="about-stat-mini">
+            <i class="bi bi-globe"></i>
+            <span>Sustainability</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ABOUT THE INSTITUTE -->
+    <div class="about-content-section">
+      <h2 class="about-section-title">
+        <i class="bi bi-building"></i>
+        About the Institute
+      </h2>
+      
+      <div class="about-content-card">
+        <div class="about-card-body">
+          <!-- SIES Information -->
+          <div class="about-institute-intro">
+            <h3 class="about-institute-name">South Indian Education Society (SIES)</h3>
+            <p class="about-text">
+              Established in <strong>1932</strong>, SIES is a value-based educational trust that manages 
+              several educational institutes in Mumbai and Navi Mumbai, acclaimed for its strong foundation 
+              of cultural values and ethos.
+            </p>
+          </div>
+
+          <div class="about-divider"></div>
+
+          <!-- SIESCOMS Information -->
+          <div class="about-institute-details">
+            <h3 class="about-institute-name">SIES College of Management Studies (SIESCOMS)</h3>
+            <p class="about-text">
+              Established in <strong>1995</strong> and affiliated to the University of Mumbai, SIESCOMS 
+              offers higher education programs including Masters in Management Studies (MMS), Masters in 
+              Computer Applications (MCA), and PhD in Management Studies and Computer Applications.
+            </p>
+            
+            <div class="about-programs-grid">
+              <div class="about-program-card">
+                <i class="bi bi-briefcase-fill"></i>
+                <h4>MMS Program</h4>
+                <p>Two-year full-time management program approved by AICTE, offering specializations in Marketing, Finance, Operations, Systems & Human Resources</p>
+              </div>
+              
+              <div class="about-program-card">
+                <i class="bi bi-code-slash"></i>
+                <h4>MCA Program</h4>
+                <p>Two-year full-time program introduced in 2001, approved by AICTE, New Delhi and accredited by NBA</p>
+              </div>
+            </div>
+
+            <div class="about-accreditation">
+              <i class="bi bi-award-fill"></i>
+              <span>Both MMS and MCA programs are <strong>accredited by the National Board of Accreditation (NBA)</strong>, New Delhi</span>
+            </div>
+          </div>
+
+          <div class="about-divider"></div>
+
+          <!-- Vision & Mission -->
+          <div class="about-vision-mission">
+            <div class="about-vm-card about-vm-vision">
+              <div class="about-vm-icon">
+                <i class="bi bi-eye-fill"></i>
+              </div>
+              <div class="about-vm-content">
+                <h4>Our Vision</h4>
+                <p>To be one of the preferred business schools in India</p>
+              </div>
+            </div>
+
+            <div class="about-vm-card about-vm-mission">
+              <div class="about-vm-icon">
+                <i class="bi bi-bullseye"></i>
+              </div>
+              <div class="about-vm-content">
+                <h4>Our Mission</h4>
+                <ul>
+                  <li>Provide education that equips students with knowledge, skills and attitude meeting industry expectations</li>
+                  <li>Develop critical thinking and innovative skills through experiential learning and applied research</li>
+                  <li>Instill and nurture sense of ethics and values in students</li>
+                  <li>Impart leadership and collaborative skills with high professional competence</li>
+                </ul>
               </div>
             </div>
           </div>
-        </div>
 
-        <!-- Conference Focus Areas -->
-        <div class="row mb-5">
-          <div class="col-lg-10 mx-auto">
-            <div class="card shadow-sm border-0">
-              <div class="card-body p-5">
-                <h3 class="mb-4" style="color: #004b87">
-                  Conference Focus Areas
-                </h3>
-                <div class="row">
-                  <div class="col-md-4 mb-4">
-                    <div
-                      class="text-center p-4"
-                      style="
-                        background-color: #e6f0f7;
-                        border-radius: 10px;
-                        height: 100%;
-                      "
-                    >
-                      <i
-                        class="bi bi-lightbulb-fill"
-                        style="font-size: 3rem; color: #f58634"
-                      ></i>
-                      <h5 class="mt-3 mb-3">Innovation</h5>
-                      <p class="text-muted mb-0">
-                        Exploring innovative ideas and digital transformation
-                        for nation building.
-                      </p>
-                    </div>
-                  </div>
-                  <div class="col-md-4 mb-4">
-                    <div
-                      class="text-center p-4"
-                      style="
-                        background-color: #e6f0f7;
-                        border-radius: 10px;
-                        height: 100%;
-                      "
-                    >
-                      <i
-                        class="bi bi-cpu-fill"
-                        style="font-size: 3rem; color: #f58634"
-                      ></i>
-                      <h5 class="mt-3 mb-3">Technology</h5>
-                      <p class="text-muted mb-0">
-                        Leveraging technology to strengthen institutions and
-                        enable growth across sectors.
-                      </p>
-                    </div>
-                  </div>
-                  <div class="col-md-4 mb-4">
-                    <div
-                      class="text-center p-4"
-                      style="
-                        background-color: #e6f0f7;
-                        border-radius: 10px;
-                        height: 100%;
-                      "
-                    >
-                      <i
-                        class="bi bi-globe"
-                        style="font-size: 3rem; color: #f58634"
-                      ></i>
-                      <h5 class="mt-3 mb-3">Sustainability</h5>
-                      <p class="text-muted mb-0">
-                        Promoting sustainable practices for responsible
-                        leadership and inclusive growth.
-                      </p>
-                    </div>
-                  </div>
+          <!-- Core Values - Streamlined -->
+          <div class="about-values-section">
+            <h4 class="about-values-title">Our Core Values</h4>
+            <div class="about-values-grid">
+              <div class="about-value-item">
+                <div class="about-value-icon">
+                  <i class="bi bi-gem"></i>
                 </div>
+                <h5>Integrity</h5>
+                <p>Fair, honest and transparent conduct in all endeavors</p>
               </div>
-            </div>
-          </div>
-        </div>
 
-        <!-- Conference Goals -->
-        <div class="row mb-5">
-          <div class="col-lg-10 mx-auto">
-            <div class="card shadow-sm border-0">
-              <div class="card-body p-5">
-                <h3 class="mb-4" style="color: #004b87">Conference Goals</h3>
-                <div class="row">
-                  <div class="col-md-6 mb-3">
-                    <div class="d-flex align-items-start">
-                      <i
-                        class="bi bi-arrow-right-circle-fill me-3 fs-5"
-                        style="color: #f58634"
-                      ></i>
-                      <div>
-                        <h5>Inclusive Growth</h5>
-                        <p class="text-muted mb-0">
-                          Drive inclusive growth through interdisciplinary
-                          research and innovation for a Viksit Bharat.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-6 mb-3">
-                    <div class="d-flex align-items-start">
-                      <i
-                        class="bi bi-arrow-right-circle-fill me-3 fs-5"
-                        style="color: #f58634"
-                      ></i>
-                      <div>
-                        <h5>Institutional Strengthening</h5>
-                        <p class="text-muted mb-0">
-                          Strengthen institutions through technology, innovation
-                          frameworks and empirical insights.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-6 mb-3">
-                    <div class="d-flex align-items-start">
-                      <i
-                        class="bi bi-arrow-right-circle-fill me-3 fs-5"
-                        style="color: #f58634"
-                      ></i>
-                      <div>
-                        <h5>Responsible Leadership</h5>
-                        <p class="text-muted mb-0">
-                          Enable responsible leadership aligned with ESG
-                          principles and nation-building objectives.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-6 mb-3">
-                    <div class="d-flex align-items-start">
-                      <i
-                        class="bi bi-arrow-right-circle-fill me-3 fs-5"
-                        style="color: #f58634"
-                      ></i>
-                      <div>
-                        <h5>Interdisciplinary Research</h5>
-                        <p class="text-muted mb-0">
-                          Welcome research contributions across management
-                          disciplines that advance India's progress.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
+              <div class="about-value-item">
+                <div class="about-value-icon">
+                  <i class="bi bi-star-fill"></i>
                 </div>
+                <h5>Excellence</h5>
+                <p>Striving for outstanding performance in every task</p>
+              </div>
+
+              <div class="about-value-item">
+                <div class="about-value-icon">
+                  <i class="bi bi-people-fill"></i>
+                </div>
+                <h5>Responsibility</h5>
+                <p>Accountability and ownership of our actions</p>
+              </div>
+
+              <div class="about-value-item">
+                <div class="about-value-icon">
+                  <i class="bi bi-award"></i>
+                </div>
+                <h5>Respect</h5>
+                <p>Valuing dignity and diversity of every individual</p>
+              </div>
+
+              <div class="about-value-item">
+                <div class="about-value-icon">
+                  <i class="bi bi-heart-fill"></i>
+                </div>
+                <h5>Passion</h5>
+                <p>Dedication towards holistic growth and development</p>
+              </div>
+
+              <div class="about-value-item">
+                <div class="about-value-icon">
+                  <i class="bi bi-emoji-smile-fill"></i>
+                </div>
+                <h5>Humility</h5>
+                <p>Modesty and grace in all achievements</p>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
-    <!-- About Section End -->
+    </div>
+
+    <!-- ABOUT THE CONFERENCE -->
+    <div class="about-content-section">
+      <h2 class="about-section-title">
+        <i class="bi bi-calendar-event"></i>
+        About the Conference
+      </h2>
+      
+      <div class="about-content-card">
+        <div class="about-card-body">
+          <p class="about-conference-text">
+            The International Research Conference on <strong>Nation-Building through Innovation, Technology 
+            and Sustainability</strong> is a global academic and professional forum dedicated to exploring how 
+            innovative thinking, technological advancement, and sustainable practices can collectively contribute 
+            to inclusive and resilient nation-building.
+          </p>
+
+          <p class="about-conference-text">
+            The conference brings together researchers, academicians, policymakers, industry professionals, 
+            entrepreneurs, and development practitioners from around the world to share knowledge, research 
+            findings, and best practices that support national progress in an increasingly interconnected 
+            and rapidly changing world.
+          </p>
+
+          <div class="about-conference-highlight">
+            <i class="bi bi-quote"></i>
+            <p>
+              In the 21st century, nation-building extends beyond economic growth to include social equity, 
+              environmental responsibility, technological readiness, and institutional strength. This conference 
+              recognizes that innovation and technology are powerful enablers of development, but their true 
+              impact can only be realized when aligned with sustainability principles.
+            </p>
+          </div>
+
+          <!-- Conference Pillars -->
+          <div class="about-pillars-section">
+            <h4 class="about-pillars-title">Conference Pillars</h4>
+            <div class="about-pillars-grid">
+              <div class="about-pillar-card">
+                <div class="about-pillar-icon" style="background: linear-gradient(135deg, #004b87, #0066b2);">
+                  <i class="bi bi-lightbulb-fill"></i>
+                </div>
+                <h5>Innovation</h5>
+                <p>Exploring innovative ideas, digital transformation, and cutting-edge solutions for nation-building challenges</p>
+              </div>
+
+              <div class="about-pillar-card">
+                <div class="about-pillar-icon" style="background: linear-gradient(135deg, #f58634, #e66428);">
+                  <i class="bi bi-cpu-fill"></i>
+                </div>
+                <h5>Technology</h5>
+                <p>Leveraging technology to strengthen institutions, enable growth, and empower citizens across sectors</p>
+              </div>
+
+              <div class="about-pillar-card">
+                <div class="about-pillar-icon" style="background: linear-gradient(135deg, #2d7a3e, #1e5128);">
+                  <i class="bi bi-globe"></i>
+                </div>
+                <h5>Sustainability</h5>
+                <p>Promoting sustainable practices, ESG principles, and responsible leadership for inclusive development</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Conference Goals -->
+          <div class="about-goals-section">
+            <h4 class="about-goals-title">Conference Objectives</h4>
+            <div class="about-goals-list">
+              <div class="about-goal-item">
+                <div class="about-goal-number">01</div>
+                <div class="about-goal-content">
+                  <h5>Drive Inclusive Growth</h5>
+                  <p>Foster interdisciplinary research and innovation contributing to Viksit Bharat through inclusive growth strategies</p>
+                </div>
+              </div>
+
+              <div class="about-goal-item">
+                <div class="about-goal-number">02</div>
+                <div class="about-goal-content">
+                  <h5>Strengthen Institutions</h5>
+                  <p>Enhance institutional capacity through technology adoption, innovation frameworks, and empirical insights</p>
+                </div>
+              </div>
+
+              <div class="about-goal-item">
+                <div class="about-goal-number">03</div>
+                <div class="about-goal-content">
+                  <h5>Enable Responsible Leadership</h5>
+                  <p>Develop leadership capabilities aligned with ESG principles and sustainable nation-building objectives</p>
+                </div>
+              </div>
+
+              <div class="about-goal-item">
+                <div class="about-goal-number">04</div>
+                <div class="about-goal-content">
+                  <h5>Welcome Interdisciplinary Research</h5>
+                  <p>Encourage research contributions across management disciplines advancing India's progress and development</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Call to Action -->
+          <div class="about-cta-box">
+            <i class="bi bi-megaphone-fill"></i>
+            <div class="about-cta-content">
+              <h4>Join Us in Building the Nation</h4>
+              <p>We invite scholars, researchers, industry practitioners and academicians to contribute to this transformative dialogue on innovation, technology and sustainability.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- End About Section -->

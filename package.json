@@ -1,7 +1,7 @@
 {
-  "name": "cpcon-conference-website",
+  "name": "ic-nbits-conference-website",
   "version": "1.0.0",
-  "description": "CPCON 2026 Conference Website",
+  "description": "IC-NBITS 2026 International Research Conference Website",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",

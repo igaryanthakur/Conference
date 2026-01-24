@@ -74,54 +74,16 @@ if (process.env.NODE_ENV === "production") {
   app.set("view cache", true);
 }
 
-// Routes
+// Routes - Single-page app; all content on /
 app.get("/", (req, res) => {
   res.render("index", {
-    title: "IC‑NBITS 2026 - International Conference on Nation-Building",
+    title: "IC‑NBITS 2026 - International Research Conference on Nation-Building",
     pageTitle: "Home",
   });
 });
 
-// About page
-app.get("/about", (req, res) => {
-  res.render("about", {
-    title: "About - IC‑NBITS 2026",
-    pageTitle: "About",
-  });
-});
-
-// Abstract page (renamed to Papers)
-app.get("/papers", (req, res) => {
-  res.render("papers", {
-    title: "Call for Papers - IC‑NBITS 2026",
-    pageTitle: "Papers",
-  });
-});
-
-// Keep /abstract as fallback for backward compatibility
-app.get("/abstract", (req, res) => {
-  res.render("papers", {
-    title: "Call for Papers - IC‑NBITS 2026",
-    pageTitle: "Papers",
-  });
-});
-
-// Committee page
-app.get("/committee", (req, res) => {
-  res.render("committee", {
-    title: "Committee - IC‑NBITS 2026",
-    pageTitle: "Committee",
-  });
-});
-
-
-// Contact page
-app.get("/contact", (req, res) => {
-  res.render("contact", {
-    title: "Contact Us - IC‑NBITS 2026",
-    pageTitle: "Contact",
-  });
-});
+// 404: redirect to home (single-page app)
+app.use((req, res) => res.redirect(301, "/"));
 
 // Start server
 app.listen(PORT, () => {

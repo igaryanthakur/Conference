@@ -3,7 +3,9 @@
   <%- include('partials/head') %>
 
   <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
     <%- include('partials/header') %>
+    <main id="main-content" tabindex="-1">
 
     <%- include('partials/sections/hero') %>
     <%- include('partials/sections/highlights') %>
@@ -15,7 +17,8 @@
     <%- include('partials/sections/committee') %>
     <%- include('partials/sections/fees') %>
     <%- include('partials/sections/contact') %>
-
-    <%- include('partials/footer') %> <%- include('partials/scripts') %>
+    </main>
+    <%- include('partials/footer') %>
+    <%- include('partials/scripts') %>
   </body>
 </html>

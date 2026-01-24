@@ -1,22 +1,26 @@
-    <!-- Highlights Section -->
-    <section id="highlights" class="highlights-section">
-      <div class="container">
-        <h2 class="section-title">IC‑NBITS 2026 Highlights</h2>
+<!-- Highlights Section with Tabs -->
+<section id="highlights" class="highlights-section">
+  <div class="container">
+    <h2 class="section-title">IC‑NBITS 2026 Highlights</h2>
 
-        
+    <!-- Tab Navigation -->
+    <div class="conference-tabs">
+      <button class="conference-tab-btn active" data-tab="conference">
+        <i class="bi bi-mic-fill"></i>
+        Conference
+      </button>
+      <button class="conference-tab-btn" data-tab="pre-conference">
+        <i class="bi bi-calendar-event"></i>
+        Pre-Conference
+      </button>
+    </div>
 
-        <!-- Conference Section -->
-        <div class="row mb-5">
-          <div class="col-12">
-            <h3 class="mb-4 text-center content-heading" style="color: #004b87; font-size: 1.75rem;">
-              <i class="bi bi-mic-fill me-2" style="color: #f58634;"></i>Conference
-            </h3>
-          </div>
-        </div>
-
-        
-
-        <!-- Labels: Conference Inaugural (between first two) | Conference Speaker (above Jitender) -->
+    <!-- Tab Content -->
+    <div class="conference-tab-content">
+      
+      <!-- CONFERENCE TAB -->
+      <div class="tab-pane active" id="conference-tab">
+        <!-- Labels: Conference Inaugural | Conference Speaker -->
         <div class="row mb-3 align-items-end">
           <div class="col-lg-8 text-center mb-3 mb-lg-0">
             <h4 class="mb-0" style="color: #004b87; font-size: 1.25rem;">
@@ -45,10 +49,7 @@
                 <h5 class="card-title mb-2" style="color: #004b87">
                   Philip C. Zerrillo
                 </h5>
-                <p
-                  class="text-muted mb-2"
-                  style="font-size: 0.9rem; font-weight: 600; color: #f58634"
-                >
+                <p class="text-muted mb-2" style="font-size: 0.9rem; font-weight: 600; color: #f58634">
                   Chief Guest
                 </p>
                 <p class="card-text small text-muted mb-0">
@@ -59,7 +60,7 @@
             </div>
           </div>
 
-          <!-- Conference Speaker 2 - Guest of Honour (initials: SB) -->
+          <!-- Conference Speaker 2 - Guest of Honour -->
           <div class="col-lg-4 col-md-4 mb-4">
             <div class="card h-100 shadow-sm border-0 highlight-card">
               <div class="card-body text-center p-4">
@@ -69,10 +70,7 @@
                 <h5 class="card-title mb-2" style="color: #004b87">
                   Subhendu Kumar Bal
                 </h5>
-                <p
-                  class="text-muted mb-2"
-                  style="font-size: 0.9rem; font-weight: 600; color: #f58634"
-                >
+                <p class="text-muted mb-2" style="font-size: 0.9rem; font-weight: 600; color: #f58634">
                   Guest of Honour
                 </p>
                 <p class="card-text small text-muted mb-0">
@@ -96,10 +94,7 @@
                 <h5 class="card-title mb-2" style="color: #004b87">
                   Jitender Kummar
                 </h5>
-                <p
-                  class="text-muted mb-2"
-                  style="font-size: 0.9rem; font-weight: 600; color: #f58634"
-                >
+                <p class="text-muted mb-2" style="font-size: 0.9rem; font-weight: 600; color: #f58634">
                   Keynote
                 </p>
                 <p class="card-text small text-muted mb-0">
@@ -111,16 +106,10 @@
             </div>
           </div>
         </div>
+      </div>
 
-        <!-- Pre-Conference Section -->
-        <div class="row mb-5">
-          <div class="col-12">
-            <h3 class="mb-4 text-center content-heading" style="color: #004b87; font-size: 1.75rem;">
-              <i class="bi bi-calendar-event me-2" style="color: #f58634;"></i>Pre-Conference
-            </h3>
-          </div>
-        </div>
-
+      <!-- PRE-CONFERENCE TAB -->
+      <div class="tab-pane" id="pre-conference-tab">
         <div class="row mb-5">
           <!-- Pre-Conference Speaker 1 -->
           <div class="col-lg-4 col-md-6 mb-4">
@@ -186,66 +175,42 @@
             </div>
           </div>
         </div>
+      </div>
 
-        <!-- Journals Section - Common for both Pre-Conference and Conference -->
-        <div class="row">
-          <div class="col-12">
-            <div class="card shadow-sm border-0 mb-4" style="background: linear-gradient(135deg, rgba(0, 75, 135, 0.05), rgba(245, 134, 52, 0.05));">
-              <div class="card-body p-5">
-                <h3 class="mb-4 text-center" style="color: #004b87;">
-                  <i class="bi bi-journal-text me-2" style="color: #f58634;"></i>Journals
-                </h3>
-                <div class="row">
-                  <div class="col-md-6 mb-3">
-                    <div class="d-flex align-items-start">
-                      <i class="bi bi-check-circle-fill me-3 fs-5" style="color: #f58634; margin-top: 0.25rem;"></i>
-                      <div>
-                        <h5 style="color: #004b87;">South Asian Journal of Business and Management Cases (SAJBMC)</h5>
-                        <p class="text-muted mb-0">SAGE Publications</p>
-                      </div>
-                    </div>
+    </div>
+
+    <!-- Journals Section (stays visible for both tabs) -->
+    <div class="row mt-5">
+      <div class="col-12">
+        <div class="card shadow-sm border-0 mb-4" style="background: linear-gradient(135deg, rgba(0, 75, 135, 0.05), rgba(245, 134, 52, 0.05));">
+          <div class="card-body p-5">
+            <h3 class="mb-4 text-center" style="color: #004b87;">
+              <i class="bi bi-journal-text me-2" style="color: #f58634;"></i>Journals
+            </h3>
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <div class="d-flex align-items-start">
+                  <i class="bi bi-check-circle-fill me-3 fs-5" style="color: #f58634; margin-top: 0.25rem;"></i>
+                  <div>
+                    <h5 style="color: #004b87;">South Asian Journal of Business and Management Cases (SAJBMC)</h5>
+                    <p class="text-muted mb-0">SAGE Publications</p>
                   </div>
-                  <div class="col-md-6 mb-3">
-                    <div class="d-flex align-items-start">
-                      <i class="bi bi-check-circle-fill me-3 fs-5" style="color: #f58634; margin-top: 0.25rem;"></i>
-                      <div>
-                        <h5 style="color: #004b87;">Transformational Management Review (TMR)</h5>
-                        <p class="text-muted mb-0">Published by IILM as an institutional, peer-reviewed, open-access journal</p>
-                      </div>
-                    </div>
+                </div>
+              </div>
+              <div class="col-md-6 mb-3">
+                <div class="d-flex align-items-start">
+                  <i class="bi bi-check-circle-fill me-3 fs-5" style="color: #f58634; margin-top: 0.25rem;"></i>
+                  <div>
+                    <h5 style="color: #004b87;">Transformational Management Review (TMR)</h5>
+                    <p class="text-muted mb-0">Published by IILM as an institutional, peer-reviewed, open-access journal</p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-
-        <!-- 2025's Conference Images -->
-        <div class="row mt-5">
-          <div class="col-12">
-            <h3 class="mb-4 text-center" style="color: #004b87;">
-              <i class="bi bi-images me-2" style="color: #f58634;"></i>Remembering 2025's Conference
-            </h3>
-          </div>
-          <div class="col-md-6 mb-4">
-            <div class="conference-image-card">
-              <img
-                src="/images/Con20252.jpeg"
-                alt="IC-NBITS 2025 Conference"
-                class="img-fluid rounded shadow-sm"
-              />
-            </div>
-          </div>
-          <div class="col-md-6 mb-4">
-            <div class="conference-image-card">
-              <img
-                src="/images/Con20251.jpeg"
-                alt="IC-NBITS 2025 Conference"
-                class="img-fluid rounded shadow-sm"
-              />
-            </div>
-          </div>
-        </div>
       </div>
-    </section>
-    <!-- Highlights Section End -->
+    </div>
+
+  </div>
+</section>

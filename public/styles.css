@@ -331,7 +331,7 @@ img {
 .hero-dates,
 .hero-hybrid-mode {
   font-family: "Montserrat", sans-serif;
-  color: var(--white);
+  color: #fff;
 }
 
 .hero-main-title {
@@ -339,6 +339,7 @@ img {
   font-weight: 700;
   margin-bottom: clamp(1.25rem, 2.5vw, 1.75rem);
   line-height: 1.2;
+  /* text-align: center; */
 }
 
 .hero-code {
@@ -1015,11 +1016,13 @@ textarea:focus {
 }
 
 .table thead {
-  background-color: var(--brand-blue) !important;
+  background-color: var(--accent) !important;
   color: #fff !important;
 }
 
 .table thead th {
+  background-color: var(--accent) !important;
+  color: #fff !important;
   border: none !important;
   font-weight: 600;
   padding: clamp(0.75rem, 1.5vw, 1rem) !important;

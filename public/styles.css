@@ -79,8 +79,10 @@ img {
   clip: rect(1px, 1px, 1px, 1px);
 }
 
-/* Header & Navigation */
-/* Header & Navigation */
+/* ========================================
+   HEADER & NAVIGATION
+   Sticky header with logo and navigation menu
+   ======================================== */
 .header {
   background: #ffffff;
   position: sticky;
@@ -222,7 +224,10 @@ img {
   width: 70%;
 }
 
-/* Responsive adjustments */
+/* ========================================
+   HEADER RESPONSIVE STYLES
+   Mobile and tablet adjustments for navigation
+   ======================================== */
 @media (max-width: 991px) {
   .header-inner {
     flex-wrap: wrap;

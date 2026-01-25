@@ -10,118 +10,26 @@
   position: relative;
 }
 
-.about-welcome-box {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 3rem;
-  background: linear-gradient(135deg, #004b87 0%, #0066b2 100%);
-  border-radius: 1.5rem;
-  padding: 3.5rem 3rem;
-  margin-bottom: 4rem;
-  box-shadow: 0 1.5rem 4rem rgba(0, 75, 135, 0.3);
-  align-items: center;
-}
-
-.about-welcome-left {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
-.about-welcome-badge {
-  background: rgba(245, 134, 52, 0.15);
-  color: #f58634;
-  padding: 0.5rem 1.25rem;
-  border-radius: 2rem;
-  font-size: 0.875rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  margin-bottom: 1rem;
-  width: fit-content;
-  border: 2px solid rgba(245, 134, 52, 0.3);
-}
-
-.about-welcome-title {
-  font-size: 4rem;
-  font-weight: 900;
-  color: #fff;
-  line-height: 1.1;
-  margin: 0;
-}
-
-.about-year {
-  color: #f58634;
-  display: block;
-  font-size: 5rem;
-  margin-top: 0.25rem;
-}
-
-.about-welcome-subtitle {
-  color: rgba(255, 255, 255, 0.9);
-  font-size: 1.25rem;
-  font-weight: 600;
-  margin-top: 0.75rem;
-}
-
-.about-welcome-text {
-  color: rgba(255, 255, 255, 0.95);
-  font-size: 1.15rem;
-  line-height: 1.8;
-  margin: 0 0 1.5rem 0;
-  text-align: justify;
-}
-
-.about-welcome-text strong {
-  color: #f58634;
-  font-weight: 700;
-}
-
-.about-section-header {
-  font-size: 3rem;
-  font-weight: 900;
-  color: #004b87;
-  text-align: center;
-  margin-bottom: 3rem;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  position: relative;
-  padding-bottom: 1rem;
-}
-
-.about-section-header::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 120px;
-  height: 5px;
-  background: linear-gradient(90deg, #004b87, #f58634, #004b87);
-  border-radius: 3px;
-}
-
 .about-content-section {
   margin-bottom: 4rem;
 }
 
 .about-section-title {
-  font-size: 2.5rem;
-  font-weight: 800;
+  font-size: 2.75rem;
+  font-weight: 900;
   color: #004b87;
   text-align: center;
-  margin-bottom: 3rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
+  margin-bottom: 1rem;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
 }
 
-.about-section-title i {
-  color: #f58634;
-  font-size: 2.25rem;
+.about-title-divider {
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(90deg, #004b87, #f58634, #004b87);
+  margin: 1.5rem auto 3rem;
+  border-radius: 3px;
 }
 
 .about-content-card {
@@ -129,6 +37,7 @@
   border-radius: 1.5rem;
   box-shadow: 0 0.5rem 2rem rgba(0, 75, 135, 0.08);
   transition: all 0.4s ease;
+  overflow: hidden;
 }
 
 .about-content-card:hover {
@@ -140,485 +49,434 @@
   padding: 4rem 3.5rem;
 }
 
-.about-text {
-  font-size: 1.125rem;
-  line-height: 1.8;
-  color: #4a5568;
-  margin-bottom: 1.5rem;
+/* ===== ANIMATED PARAGRAPHS STYLES ===== */
+.about-intro-animated {
+  margin-bottom: 4rem;
 }
 
-.about-text strong {
-  color: #004b87;
-  font-weight: 700;
-}
-
-.about-institute-name {
-  font-size: 1.625rem;
-  font-weight: 700;
-  color: #004b87;
-  margin-bottom: 1rem;
-}
-
-.about-divider {
-  height: 2px;
-  background: linear-gradient(90deg, transparent, rgba(0, 75, 135, 0.1), transparent);
-  margin: 3rem 0;
-}
-
-.about-programs-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
-  margin: 2rem 0;
-}
-
-.about-program-card {
-  background: linear-gradient(135deg, #f0f7ff 0%, #e6f0f7 100%);
-  padding: 2rem;
-  border-radius: 1rem;
-  border-left: 4px solid #004b87;
-  transition: all 0.3s ease;
-}
-
-.about-program-card:hover {
-  transform: translateX(5px);
-  box-shadow: 0 8px 20px rgba(0, 75, 135, 0.12);
-}
-
-.about-program-card i {
-  font-size: 2.5rem;
-  color: #f58634;
-  margin-bottom: 1rem;
-  display: block;
-}
-
-.about-program-card h4 {
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: #004b87;
-  margin-bottom: 0.75rem;
-}
-
-.about-program-card p {
-  font-size: 0.95rem;
-  color: #4a5568;
-  line-height: 1.6;
-  margin: 0;
-}
-
-.about-accreditation {
+.about-animated-para {
   display: flex;
-  align-items: center;
-  gap: 1rem;
-  background: linear-gradient(135deg, #fff8f0 0%, #fff4e6 100%);
-  padding: 1.5rem;
-  border-radius: 1rem;
-  border-left: 4px solid #f58634;
-  margin-top: 2rem;
-}
-
-.about-accreditation i {
-  font-size: 2rem;
-  color: #f58634;
-}
-
-.about-accreditation strong {
-  color: #f58634;
-  font-weight: 700;
-}
-
-.about-vision-mission {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  align-items: flex-start;
   gap: 2rem;
-  margin: 2rem 0;
-}
-
-.about-vm-card {
+  margin-bottom: 3rem;
+  padding: 2.5rem;
   background: #fff;
   border-radius: 1rem;
-  padding: 2rem;
-  box-shadow: 0 0.5rem 1.5rem rgba(0, 75, 135, 0.08);
-  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0, 75, 135, 0.08);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   overflow: hidden;
+  opacity: 0;
+  transform: translateY(40px);
+  animation: smoothSlideUp 0.8s ease-out forwards;
 }
 
-.about-vm-card::before {
+@keyframes smoothSlideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.about-para-animate-1 {
+  animation-delay: 0.15s;
+}
+
+.about-para-animate-2 {
+  animation-delay: 0.3s;
+}
+
+.about-para-animate-3 {
+  animation-delay: 0.45s;
+  margin-bottom: 0;
+}
+
+.about-animated-para::before {
   content: '';
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 4px;
+  width: 4px;
+  height: 100%;
+  opacity: 1;
 }
 
-.about-vm-vision::before {
-  background: linear-gradient(90deg, #004b87, #0066b2);
+.about-para-animate-1::before {
+  background: linear-gradient(180deg, #004b87, #0066b2);
 }
 
-.about-vm-mission::before {
-  background: linear-gradient(90deg, #f58634, #e66428);
+.about-para-animate-2::before {
+  background: linear-gradient(180deg, #f58634, #e66428);
 }
 
-.about-vm-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 1rem 2.5rem rgba(0, 75, 135, 0.15);
+.about-para-animate-3::before {
+  background: linear-gradient(180deg, #2d7a3e, #1e5128);
 }
 
-.about-vm-icon {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
+.about-animated-para:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 35px rgba(0, 75, 135, 0.15);
+}
+
+.about-animated-para:hover::before {
+  width: 5px;
+  box-shadow: 0 0 8px currentColor;
+}
+
+.about-animated-icon-wrapper {
+  flex-shrink: 0;
+}
+
+.about-animated-icon {
+  width: 65px;
+  height: 65px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 1.5rem;
+  border-radius: 16px;
   font-size: 1.75rem;
-}
-
-.about-vm-vision .about-vm-icon {
-  background: linear-gradient(135deg, rgba(0, 75, 135, 0.1), rgba(0, 102, 178, 0.1));
-  color: #004b87;
-}
-
-.about-vm-mission .about-vm-icon {
-  background: linear-gradient(135deg, rgba(245, 134, 52, 0.1), rgba(230, 100, 40, 0.1));
-  color: #f58634;
-}
-
-.about-vm-content h4 {
-  font-size: 1.5rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-}
-
-.about-vm-vision .about-vm-content h4 {
-  color: #004b87;
-}
-
-.about-vm-mission .about-vm-content h4 {
-  color: #f58634;
-}
-
-.about-vm-content p {
-  font-size: 1.05rem;
-  color: #4a5568;
-  line-height: 1.7;
-  margin: 0;
-}
-
-.about-vm-content ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.about-vm-content ul li {
-  font-size: 0.95rem;
-  color: #4a5568;
-  line-height: 1.7;
-  margin-bottom: 0.75rem;
-  padding-left: 1.75rem;
+  color: #fff;
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   position: relative;
 }
 
-.about-vm-content ul li::before {
-  content: '✓';
-  position: absolute;
-  left: 0;
-  color: #f58634;
-  font-weight: 700;
-  font-size: 1.1rem;
-}
-
-.about-values-section {
-  margin-top: 3rem;
-}
-
-.about-values-title {
-  font-size: 1.875rem;
-  font-weight: 700;
-  color: #004b87;
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-.about-values-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-.about-value-item {
-  text-align: center;
-  padding: 1.5rem;
-  background: linear-gradient(135deg, #f9f8f4 0%, #fdfcf9 100%);
-  border-radius: 1rem;
-  transition: all 0.3s ease;
-  cursor: pointer;
-}
-
-.about-value-item:hover {
-  background: linear-gradient(135deg, #e6f0f7 0%, #f0f7ff 100%);
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0, 75, 135, 0.1);
-}
-
-.about-value-icon {
-  width: 60px;
-  height: 60px;
-  margin: 0 auto 1rem;
+.about-icon-blue {
   background: linear-gradient(135deg, #004b87, #0066b2);
-  border-radius: 50%;
+  box-shadow: 0 8px 24px rgba(0, 75, 135, 0.25);
+}
+
+.about-icon-orange {
+  background: linear-gradient(135deg, #f58634, #e66428);
+  box-shadow: 0 8px 24px rgba(245, 134, 52, 0.25);
+}
+
+.about-icon-green {
+  background: linear-gradient(135deg, #2d7a3e, #1e5128);
+  box-shadow: 0 8px 24px rgba(45, 122, 62, 0.25);
+}
+
+.about-animated-para:hover .about-animated-icon {
+  transform: scale(1.15) rotate(8deg);
+}
+
+.about-icon-blue:hover {
+  box-shadow: 0 12px 32px rgba(0, 75, 135, 0.4);
+}
+
+.about-icon-orange:hover {
+  box-shadow: 0 12px 32px rgba(245, 134, 52, 0.4);
+}
+
+.about-icon-green:hover {
+  box-shadow: 0 12px 32px rgba(45, 122, 62, 0.4);
+}
+
+.about-animated-content {
+  flex: 1;
+}
+
+.about-animated-text {
+  font-size: 1.075rem;
+  line-height: 1.85;
+  color: #4a5568;
+  margin: 0;
+  text-align: justify;
+  transition: color 0.3s ease;
+}
+
+.about-animated-para:hover .about-animated-text {
+  color: #2d3748;
+}
+
+.about-animated-text strong {
+  font-weight: 700;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.about-para-animate-1 .about-animated-text strong {
+  color: #004b87;
+}
+
+.about-para-animate-2 .about-animated-text strong {
+  color: #f58634;
+}
+
+.about-para-animate-3 .about-animated-text strong {
+  color: #2d7a3e;
+}
+
+/* Pulse animation for icons */
+@keyframes iconPulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.about-animated-icon {
+  animation: iconPulse 3s ease-in-out infinite;
+}
+
+.about-para-animate-1 .about-animated-icon {
+  animation-delay: 0s;
+}
+
+.about-para-animate-2 .about-animated-icon {
+  animation-delay: 1s;
+}
+
+.about-para-animate-3 .about-animated-icon {
+  animation-delay: 2s;
+}
+
+/* ===== END ANIMATED PARAGRAPHS ===== */
+
+.about-divider {
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(0, 75, 135, 0.15), transparent);
+  margin: 3.5rem 0;
+}
+
+/* Section Headers */
+.about-subsection-header {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #fff;
-  font-size: 1.5rem;
-  transition: all 0.3s ease;
+  gap: 1rem;
+  margin-bottom: 3rem;
+  margin-top: 3.5rem;
 }
 
-.about-value-item:hover .about-value-icon {
-  background: linear-gradient(135deg, #f58634, #e66428);
-  transform: scale(1.1) rotate(10deg);
-}
-
-.about-value-item h5 {
-  font-size: 1.125rem;
-  font-weight: 700;
+.about-subsection-header h4 {
+  font-size: 2rem;
+  font-weight: 800;
   color: #004b87;
-  margin-bottom: 0.5rem;
-}
-
-.about-value-item p {
-  font-size: 0.875rem;
-  color: #6b7280;
-  line-height: 1.6;
   margin: 0;
+  letter-spacing: 0.01em;
 }
 
-.about-conference-text {
-  font-size: 1.125rem;
-  line-height: 1.8;
-  color: #4a5568;
-  margin-bottom: 1.5rem;
-  text-align: justify;
+.about-subsection-header i {
+  font-size: 2rem;
+  color: #f58634;
 }
 
-.about-conference-highlight {
-  background: linear-gradient(135deg, #f0f7ff 0%, #e6f0f7 100%);
-  border-left: 4px solid #004b87;
-  padding: 2rem;
-  border-radius: 1rem;
-  margin: 2.5rem 0;
-  position: relative;
-}
-
-.about-conference-highlight i {
-  position: absolute;
-  top: 1.5rem;
-  left: 1.5rem;
-  font-size: 3rem;
-  color: rgba(0, 75, 135, 0.1);
-}
-
-.about-conference-highlight p {
-  font-size: 1.05rem;
-  color: #4a5568;
-  line-height: 1.8;
-  margin: 0;
-  padding-left: 3rem;
-  font-style: italic;
-}
-
+/* Pillars Section */
 .about-pillars-section {
-  margin: 3rem 0;
-}
-
-.about-pillars-title {
-  font-size: 1.875rem;
-  font-weight: 700;
-  color: #004b87;
-  text-align: center;
-  margin-bottom: 2rem;
+  margin: 3.5rem 0;
 }
 
 .about-pillars-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2.5rem;
 }
 
 .about-pillar-card {
   text-align: center;
-  padding: 2rem;
-  background: #fff;
-  border-radius: 1rem;
+  padding: 2.5rem 2rem;
+  background: linear-gradient(135deg, #ffffff 0%, #f9fafb 100%);
+  border-radius: 1.25rem;
   box-shadow: 0 0.5rem 1.5rem rgba(0, 75, 135, 0.08);
-  transition: all 0.4s ease;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 2px solid transparent;
 }
 
 .about-pillar-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 1.5rem 3rem rgba(0, 75, 135, 0.15);
+  transform: translateY(-12px);
+  box-shadow: 0 1.5rem 3rem rgba(0, 75, 135, 0.18);
+  border-color: rgba(245, 134, 52, 0.3);
 }
 
 .about-pillar-icon {
-  width: 80px;
-  height: 80px;
-  margin: 0 auto 1.5rem;
+  width: 90px;
+  height: 90px;
+  margin: 0 auto 1.75rem;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   color: #fff;
-  font-size: 2rem;
-  transition: all 0.3s ease;
+  font-size: 2.25rem;
+  transition: all 0.4s ease;
+  box-shadow: 0 8px 20px rgba(0, 75, 135, 0.2);
 }
 
 .about-pillar-card:hover .about-pillar-icon {
   transform: scale(1.15) rotate(10deg);
+  box-shadow: 0 12px 28px rgba(0, 75, 135, 0.3);
 }
 
 .about-pillar-card h5 {
-  font-size: 1.375rem;
-  font-weight: 700;
+  font-size: 1.5rem;
+  font-weight: 800;
   color: #004b87;
   margin-bottom: 1rem;
+  letter-spacing: 0.01em;
 }
 
 .about-pillar-card p {
-  font-size: 0.95rem;
+  font-size: 1rem;
   color: #6b7280;
-  line-height: 1.7;
+  line-height: 1.75;
   margin: 0;
 }
 
+/* Goals/Objectives Section */
 .about-goals-section {
-  margin: 3rem 0;
-}
-
-.about-goals-title {
-  font-size: 1.875rem;
-  font-weight: 700;
-  color: #004b87;
-  text-align: center;
-  margin-bottom: 2.5rem;
+  margin: 3.5rem 0;
 }
 
 .about-goals-list {
   display: grid;
-  gap: 1.5rem;
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
 .about-goal-item {
   display: flex;
-  gap: 1.5rem;
-  background: linear-gradient(135deg, #f9f8f4 0%, #fdfcf9 100%);
-  padding: 2rem;
-  border-radius: 1rem;
-  transition: all 0.3s ease;
+  gap: 2rem;
+  background: linear-gradient(135deg, #ffffff 0%, #f9fafb 100%);
+  padding: 2.5rem;
+  border-radius: 1.25rem;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 2px solid transparent;
+  box-shadow: 0 4px 12px rgba(0, 75, 135, 0.06);
 }
 
 .about-goal-item:hover {
   background: #fff;
-  box-shadow: 0 0.5rem 1.5rem rgba(0, 75, 135, 0.1);
-  transform: translateX(10px);
+  box-shadow: 0 0.75rem 2rem rgba(0, 75, 135, 0.15);
+  transform: translateX(12px);
+  border-color: rgba(0, 75, 135, 0.1);
 }
 
 .about-goal-number {
   flex-shrink: 0;
-  width: 60px;
-  height: 60px;
+  width: 70px;
+  height: 70px;
   background: linear-gradient(135deg, #004b87, #0066b2);
   color: #fff;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.5rem;
-  font-weight: 800;
-  transition: all 0.3s ease;
+  font-size: 1.75rem;
+  font-weight: 900;
+  transition: all 0.4s ease;
+  box-shadow: 0 6px 16px rgba(0, 75, 135, 0.25);
 }
 
 .about-goal-item:hover .about-goal-number {
   background: linear-gradient(135deg, #f58634, #e66428);
   transform: scale(1.1) rotate(-10deg);
+  box-shadow: 0 8px 20px rgba(245, 134, 52, 0.35);
 }
 
 .about-goal-content h5 {
-  font-size: 1.25rem;
-  font-weight: 700;
+  font-size: 1.375rem;
+  font-weight: 800;
   color: #004b87;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
+  letter-spacing: 0.01em;
 }
 
 .about-goal-content p {
-  font-size: 0.95rem;
+  font-size: 1.05rem;
   color: #6b7280;
-  line-height: 1.7;
+  line-height: 1.75;
   margin: 0;
 }
 
+/* CTA Box */
 .about-cta-box {
   display: flex;
   align-items: center;
-  gap: 2rem;
-  background: linear-gradient(135deg, #f58634, #e66428);
-  padding: 2.5rem;
+  gap: 2.5rem;
+  background: linear-gradient(135deg, #004b87 0%, #0066b2 100%);
+  padding: 3rem;
   border-radius: 1.5rem;
-  margin-top: 3rem;
-  box-shadow: 0 1rem 2.5rem rgba(245, 134, 52, 0.3);
+  margin-top: 4rem;
+  box-shadow: 0 1rem 3rem rgba(0, 75, 135, 0.3);
+  border: 2px solid rgba(255, 255, 255, 0.1);
 }
 
 .about-cta-box i {
-  font-size: 3rem;
-  color: #fff;
+  font-size: 3.5rem;
+  color: #f58634;
   flex-shrink: 0;
 }
 
 .about-cta-content h4 {
-  font-size: 1.5rem;
-  font-weight: 700;
+  font-size: 1.75rem;
+  font-weight: 800;
   color: #fff;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
+  letter-spacing: 0.01em;
 }
 
 .about-cta-content p {
-  font-size: 1rem;
+  font-size: 1.125rem;
   color: rgba(255, 255, 255, 0.95);
-  line-height: 1.7;
+  line-height: 1.8;
   margin: 0;
 }
 
 /* Responsive */
 @media (max-width: 991px) {
-  .about-welcome-box {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-  .about-vision-mission,
-  .about-programs-grid,
   .about-pillars-grid {
     grid-template-columns: 1fr;
+  }
+  .about-card-body {
+    padding: 3rem 2rem;
   }
 }
 
 @media (max-width: 767px) {
-  .about-welcome-title { font-size: 2rem; }
-  .about-year { font-size: 2.5rem; }
-  .about-card-body { padding: 2rem 1.5rem; }
-  .about-values-grid { grid-template-columns: repeat(2, 1fr); }
-  .about-cta-box { flex-direction: column; text-align: center; }
-  .about-goal-item { flex-direction: column; text-align: center; }
+  .about-section-title {
+    font-size: 2rem;
+  }
+  .about-card-body {
+    padding: 2rem 1.5rem;
+  }
+  .about-animated-para {
+    flex-direction: column;
+    padding: 2rem 1.5rem;
+    gap: 1.5rem;
+  }
+  .about-animated-icon {
+    width: 55px;
+    height: 55px;
+    font-size: 1.5rem;
+  }
+  .about-animated-text {
+    font-size: 1rem;
+  }
+  .about-cta-box {
+    flex-direction: column;
+    text-align: center;
+    padding: 2.5rem 2rem;
+  }
+  .about-goal-item {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.5rem;
+  }
+  .about-goal-number {
+    margin: 0 auto;
+  }
 }
 
 @media (max-width: 575px) {
-  .about-values-grid { grid-template-columns: 1fr; }
-  .about-section-title { font-size: 1.5rem; }
+  .about-section-title {
+    font-size: 1.75rem;
+  }
+  .about-subsection-header h4 {
+    font-size: 1.5rem;
+  }
 }
 </style>
 
@@ -626,70 +484,70 @@
 <section id="about" class="about-section">
   <div class="container">
     
-    <!-- ABOUT HEADER -->
-    <h1 class="about-section-header">About</h1>
-    
-    <!-- WELCOME BOX -->
-    <div class="about-welcome-box">
-      <div class="about-welcome-left">
-        <div class="about-welcome-badge">WELCOME TO</div>
-        <h1 class="about-welcome-title">
-          IC-NBITS <span class="about-year">2026</span>
-        </h1>
-        <p class="about-welcome-subtitle">International Research Conference</p>
-      </div>
-      
-      <div class="about-welcome-right">
-        <p class="about-welcome-text">
-          Rooted in a rich legacy of academic excellence and social commitment, the <strong>South Indian Education Society (SIES)</strong>, established in 1932, has consistently upheld the belief that education and research are powerful instruments of nation-building. Guided by this enduring philosophy, <strong>SIES College of Management Studies (SIESCOMS)</strong>, Navi Mumbai, since its inception in 1995, has been committed to nurturing responsible leaders, advancing scholarly inquiry, and contributing meaningfully to society through high-quality research and knowledge dissemination.
-        </p>
-        
-        <p class="about-welcome-text">
-          Aligned with this vision, SIESCOMS is organizing the International Research Conference on <strong>"Nation-Building through Innovation, Technology and Sustainability"</strong>, envisioned as a global academic and professional forum dedicated to exploring how innovative thinking, technological advancement, and sustainable practices can collectively contribute to inclusive and resilient nation-building. The conference seeks to bring together researchers, academicians, policymakers, industry professionals, entrepreneurs, and development practitioners from across the world to exchange ideas, present cutting-edge research, and share best practices that support national progress in an increasingly interconnected and rapidly changing world.
-        </p>
-        
-        <p class="about-welcome-text" style="margin-bottom: 0;">
-          In the 21st century, nation-building extends beyond economic growth to encompass social equity, environmental responsibility, technological preparedness, and institutional strength. This conference recognizes that while innovation and technology serve as powerful enablers of development, their true impact can be realized only when guided by sustainability principles. By integrating these dimensions, the conference aims to foster meaningful dialogue and actionable insights toward building nations that are economically robust, socially inclusive, environmentally responsible, and technologically empowered.
-        </p>
-      </div>
-    </div>
-
     <!-- ABOUT THE CONFERENCE -->
     <div class="about-content-section">
       <h2 class="about-section-title">
-        <i class="bi bi-calendar-event"></i>
         About the Conference
       </h2>
+      <div class="about-title-divider"></div>
       
       <div class="about-content-card">
         <div class="about-card-body">
-          <p class="about-conference-text">
-            The International Research Conference on <strong>Nation-Building through Innovation, Technology 
-            and Sustainability</strong> is a global academic and professional forum dedicated to exploring how 
-            innovative thinking, technological advancement, and sustainable practices can collectively contribute 
-            to inclusive and resilient nation-building.
-          </p>
+          
+          <!-- Introduction - 3 Animated Paragraphs -->
+          <div class="about-intro-animated">
+            <!-- Paragraph 1 -->
+            <div class="about-animated-para about-para-animate-1">
+              <div class="about-animated-icon-wrapper">
+                <div class="about-animated-icon about-icon-blue">
+                  <i class="bi bi-building"></i>
+                </div>
+              </div>
+              <div class="about-animated-content">
+                <p class="about-animated-text">
+                  Rooted in a rich legacy of academic excellence and social commitment, the <strong>South Indian Education Society (SIES)</strong>, established in 1932, has consistently upheld the belief that education and research are powerful instruments of nation-building. Guided by this enduring philosophy, <strong>SIES College of Management Studies (SIESCOMS)</strong>, Navi Mumbai, since its inception in 1995, has been committed to nurturing responsible leaders, advancing scholarly inquiry, and contributing meaningfully to society through high-quality research and knowledge dissemination.
+                </p>
+              </div>
+            </div>
 
-          <p class="about-conference-text">
-            The conference brings together researchers, academicians, policymakers, industry professionals, 
-            entrepreneurs, and development practitioners from around the world to share knowledge, research 
-            findings, and best practices that support national progress in an increasingly interconnected 
-            and rapidly changing world.
-          </p>
+            <!-- Paragraph 2 -->
+            <div class="about-animated-para about-para-animate-2">
+              <div class="about-animated-icon-wrapper">
+                <div class="about-animated-icon about-icon-orange">
+                  <i class="bi bi-globe2"></i>
+                </div>
+              </div>
+              <div class="about-animated-content">
+                <p class="about-animated-text">
+                  Aligned with this vision, SIESCOMS is organizing the International Research Conference on <strong>"Nation-Building through Innovation, Technology and Sustainability"</strong>, envisioned as a global academic and professional forum dedicated to exploring how innovative thinking, technological advancement, and sustainable practices can collectively contribute to inclusive and resilient nation-building. The conference seeks to bring together researchers, academicians, policymakers, industry professionals, entrepreneurs, and development practitioners from across the world to exchange ideas, present cutting-edge research, and share best practices that support national progress in an increasingly interconnected and rapidly changing world.
+                </p>
+              </div>
+            </div>
 
-          <div class="about-conference-highlight">
-            <i class="bi bi-quote"></i>
-            <p>
-              In the 21st century, nation-building extends beyond economic growth to include social equity, 
-              environmental responsibility, technological readiness, and institutional strength. This conference 
-              recognizes that innovation and technology are powerful enablers of development, but their true 
-              impact can only be realized when aligned with sustainability principles.
-            </p>
+            <!-- Paragraph 3 -->
+            <div class="about-animated-para about-para-animate-3">
+              <div class="about-animated-icon-wrapper">
+                <div class="about-animated-icon about-icon-green">
+                  <i class="bi bi-lightbulb"></i>
+                </div>
+              </div>
+              <div class="about-animated-content">
+                <p class="about-animated-text">
+                  In the 21st century, nation-building extends beyond economic growth to encompass social equity, environmental responsibility, technological preparedness, and institutional strength. This conference recognizes that while innovation and technology serve as powerful enablers of development, their true impact can be realized only when guided by sustainability principles. By integrating these dimensions, the conference aims to foster meaningful dialogue and actionable insights toward building nations that are economically robust, socially inclusive, environmentally responsible, and technologically empowered.
+                </p>
+              </div>
+            </div>
           </div>
+
+          <div class="about-divider"></div>
 
           <!-- Conference Pillars -->
           <div class="about-pillars-section">
-            <h4 class="about-pillars-title">Conference Pillars</h4>
+            <div class="about-subsection-header">
+              <i class="bi bi-columns-gap"></i>
+              <h4>Conference Pillars</h4>
+            </div>
+            
             <div class="about-pillars-grid">
               <div class="about-pillar-card">
                 <div class="about-pillar-icon" style="background: linear-gradient(135deg, #004b87, #0066b2);">
@@ -717,9 +575,15 @@
             </div>
           </div>
 
-          <!-- Conference Goals -->
+          <div class="about-divider"></div>
+
+          <!-- Conference Objectives -->
           <div class="about-goals-section">
-            <h4 class="about-goals-title">Conference Objectives</h4>
+            <div class="about-subsection-header">
+              <i class="bi bi-bullseye"></i>
+              <h4>Conference Objectives</h4>
+            </div>
+            
             <div class="about-goals-list">
               <div class="about-goal-item">
                 <div class="about-goal-number">01</div>

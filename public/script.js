@@ -6,9 +6,11 @@ document.addEventListener("DOMContentLoaded", function () {
   function handleScrollToTop() {
     if (!scrollToTopBtn) return;
     if ((window.scrollY ?? window.pageYOffset) > 300) {
+      scrollToTopBtn.classList.add("show");
       scrollToTopBtn.style.opacity = "1";
       scrollToTopBtn.style.visibility = "visible";
     } else {
+      scrollToTopBtn.classList.remove("show");
       scrollToTopBtn.style.opacity = "0";
       scrollToTopBtn.style.visibility = "hidden";
     }
@@ -26,7 +28,8 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
 
-    // Initially hide the scroll to top button
+    // Initially hide the scroll to top button (CSS .show controls display)
+    scrollToTopBtn.classList.remove("show");
     scrollToTopBtn.style.opacity = "0";
     scrollToTopBtn.style.visibility = "hidden";
     scrollToTopBtn.style.transition = "opacity 0.3s, visibility 0.3s";
@@ -445,12 +448,6 @@ document.addEventListener("DOMContentLoaded", function () {
   // Start auto-play
   startAutoPlay();
 
-  // Console feedback (can be removed in production)
-  console.log("✨ Hero Gallery: Initialized successfully");
-  console.log(`📸 Slides: ${heroGallery.slides.length}`);
-  console.log(`⏱️  Auto-play: ${heroGallery.autoPlayDelay / 1000}s interval`);
-  
-
   // ========================================
   // END OF HERO GALLERY SCRIPT
   // ========================================
@@ -544,6 +541,4 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Check when hash changes
   window.addEventListener('hashchange', checkUrlHash);
-
-  console.log('✅ Conference tabs initialized successfully');
 });

@@ -1,24 +1,60 @@
+<!-- ========================================
+     MAIN INDEX PAGE
+     Single-page application layout
+     All sections are included as partials
+     ======================================== -->
 <!DOCTYPE html>
 <html lang="en">
+  <!-- Head Section: Meta tags, stylesheets -->
   <%- include('partials/head') %>
 
   <body>
+    <!-- Skip Link: Accessibility feature for keyboard users -->
     <a class="skip-link" href="#main-content">Skip to main content</a>
+    
+    <!-- Header: Navigation and logo -->
     <%- include('partials/header') %>
+    
+    <!-- Main Content Area -->
     <main id="main-content" tabindex="-1">
-
-    <%- include('partials/sections/hero') %>
-    <%- include('partials/sections/highlights') %>
-    <%- include('partials/sections/about') %>
-    <%- include('partials/sections/papers') %>
-    <%- include('partials/sections/authors-guidelines') %>
-    <%- include('partials/sections/submission-guidelines') %>
-    <%- include('partials/sections/submission-process') %>
-    <%- include('partials/sections/committee') %>
-    <%- include('partials/sections/fees') %>
-    <%- include('partials/sections/contact') %>
+      <!-- Hero Section: Landing area with conference info and gallery -->
+      <%- include('partials/sections/hero') %>
+      
+      <!-- Highlights Section: Key conference highlights -->
+      <%- include('partials/sections/highlights') %>
+      
+      <!-- About Section: Conference information -->
+      <%- include('partials/sections/about') %>
+      
+      <!-- Papers Section: Call for papers -->
+      <%- include('partials/sections/papers') %>
+      
+      <!-- Authors Guidelines Section: Submission guidelines for authors -->
+      <%- include('partials/sections/authors-guidelines') %>
+      
+      <!-- Dates Section: Important dates and deadlines -->
+      <%- include('partials/sections/dates') %>
+      
+      <!-- Submission Guidelines Section: Detailed submission requirements -->
+      <%- include('partials/sections/submission-guidelines') %>
+      
+      <!-- Submission Process Section: Step-by-step submission process -->
+      <%- include('partials/sections/submission-process') %>
+      
+      <!-- Committee Section: Organizing and program committee members -->
+      <%- include('partials/sections/committee') %>
+      
+      <!-- Fees Section: Registration fees and payment information -->
+      <%- include('partials/sections/fees') %>
+      
+      <!-- Contact Section: Contact information and form -->
+      <%- include('partials/sections/contact') %>
     </main>
+    
+    <!-- Footer: Site footer with links and contact info -->
     <%- include('partials/footer') %>
+    
+    <!-- Scripts: JavaScript files -->
     <%- include('partials/scripts') %>
   </body>
 </html>

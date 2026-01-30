@@ -1,93 +1,107 @@
-<!-- Hero Section with Professional Auto-Rotating Gallery -->
+<!-- ========================================
+     HERO SECTION
+     Main landing section with conference information
+     and auto-rotating image gallery
+     ======================================== -->
 <section id="home" class="hero-section">
   <div class="hero-container">
-    <!-- Left Content Column (Your existing content - unchanged) -->
+    <!-- Left Column: Conference Information -->
     <div class="hero-left">
-      <!-- Conference Title -->
+      <!-- Main Conference Title -->
       <h1 class="hero-main-title">
         International Research Conference on Nation-Building through Innovation,
         Technology and Sustainability
       </h1>
 
-      <!-- Conference Code -->
+      <!-- Conference Code/Abbreviation -->
       <h2 class="hero-code">IC‑NBITS 2026</h2>
 
-      <!-- Dates and Venue -->
+      <!-- Conference Dates -->
       <p class="hero-dates">
         <strong>13th-14th March, 2026</strong>
       </p>
 
-      <!-- Hybrid Mode Text -->
+      <!-- Conference Mode (Hybrid/Online/In-person) -->
       <p class="hero-hybrid-mode">Hybrid Mode</p>
 
+      <!-- Publication Opportunities Information -->
       <p class="hero-theme">
         <strong>Publication Opportunities in SCOPUS / ABDC / Peer-Reviewed Listed Journals / Conference Proceeding with ISBN number</strong>
       </p>
 
-      <p class="hero-theme" style="text-align: justify">
-        The Microsoft CMT service was used for managing the peer-reviewing
-        process for this conference. This service was provided for free by
-        Microsoft and they bore all expenses, including costs for Azure
-        cloud services as well as for software development and support
-      </p>
-
-      <!-- CTA Buttons -->
+      <!-- Call-to-Action Buttons -->
       <div class="hero-buttons">
+        <!-- Download Brochure Button -->
         <a href="#" class="btn-hero btn-know-more">
           <i class="bi bi-download me-2"></i>Brochure
         </a>
+        <!-- Know More Button - Scrolls to highlights section -->
         <a href="#highlights" class="btn-hero btn-know-more"> Know More </a>
       </div>
     </div>
 
-    <!-- Right Gallery Column (NEW: Professional Auto-Rotating Gallery) -->
+    <!-- Right Column: Image Gallery -->
     <div class="hero-right">
       <div class="hero-gallery-wrapper">
         <!-- Gallery Slides Container -->
         <div class="hero-gallery-track">
-          <!-- Slide 1 -->
+          <!-- Slide 0: Conference Image 1 -->
           <div class="hero-gallery-slide active">
             <img
-              src="/images/Con20251.jpeg"
+              src="/images/Earth.png"
               alt="IC-NBITS 2026 Conference - Image 1"
               class="hero-gallery-img"
+              loading="eager"
+              fetchpriority="high"
+            />
+          </div>
+          <!-- Slide 1: Conference Image 2 -->
+          <div class="hero-gallery-slide">
+            <img
+              src="/images/Con20251.jpeg"
+              alt="IC-NBITS 2026 Conference - Image 2"
+              class="hero-gallery-img"
+              loading="lazy"
             />
           </div>
 
-          <!-- Slide 2 -->
+          <!-- Slide 2: Conference Image 3 -->
           <div class="hero-gallery-slide">
             <img
               src="/images/Con20252.jpeg"
-              alt="IC-NBITS 2026 Conference - Image 2"
+              alt="IC-NBITS 2026 Conference - Image 3"
               class="hero-gallery-img"
+              loading="lazy"
             />
           </div>
 
-          <!-- Slide 3 -->
+          <!-- Slide 3: Conference Image 4 -->
           <div class="hero-gallery-slide">
             <img
               src="/images/Con20253.jpeg"
-              alt="IC-NBITS 2026 Conference - Image 3"
+              alt="IC-NBITS 2026 Conference - Image 4"
               class="hero-gallery-img"
+              loading="lazy"
             />
           </div>
 
-          <!-- Slide 4 -->
+          <!-- Slide 4: Conference Image 5 -->
           <div class="hero-gallery-slide">
             <img
               src="/images/Con20254.png"
-              alt="IC-NBITS 2026 Conference - Image 4"
+              alt="IC-NBITS 2026 Conference - Image 5"
               class="hero-gallery-img"
+              loading="lazy"
             />
           </div>
         </div>
 
-        <!-- Gradient Overlay (adds depth) -->
+        <!-- Gradient Overlay for Visual Depth -->
         <div class="hero-gallery-gradient"></div>
 
-        <!-- Navigation Controls Container -->
+        <!-- Gallery Navigation Controls -->
         <div class="hero-gallery-controls">
-          <!-- Previous Button -->
+          <!-- Previous Slide Button -->
           <button 
             class="hero-gallery-arrow hero-gallery-prev" 
             aria-label="Previous image"
@@ -96,7 +110,7 @@
             <i class="bi bi-chevron-left"></i>
           </button>
 
-          <!-- Next Button -->
+          <!-- Next Slide Button -->
           <button 
             class="hero-gallery-arrow hero-gallery-next" 
             aria-label="Next image"
@@ -105,30 +119,41 @@
             <i class="bi bi-chevron-right"></i>
           </button>
 
-          <!-- Progress Indicators (Dots) -->
+          <!-- Progress Indicators (Dot Navigation) -->
           <div class="hero-gallery-dots">
+            <!-- Dot 0: Slide 0 (Earth.png) -->
             <button 
               class="hero-gallery-dot active" 
               data-slide="0" 
               aria-label="View image 1"
               type="button"
             ></button>
+            <!-- Dot 1: Slide 1 (Con20251.jpeg) -->
             <button 
               class="hero-gallery-dot" 
               data-slide="1" 
               aria-label="View image 2"
               type="button"
             ></button>
+            <!-- Dot 2: Slide 2 (Con20252.jpeg) -->
             <button 
               class="hero-gallery-dot" 
               data-slide="2" 
               aria-label="View image 3"
               type="button"
             ></button>
+            <!-- Dot 3: Slide 3 (Con20253.jpeg) -->
             <button 
               class="hero-gallery-dot" 
               data-slide="3" 
               aria-label="View image 4"
+              type="button"
+            ></button>
+            <!-- Dot 4: Slide 4 (Con20254.png) -->
+            <button 
+              class="hero-gallery-dot" 
+              data-slide="4" 
+              aria-label="View image 5"
               type="button"
             ></button>
           </div>

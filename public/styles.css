@@ -1360,6 +1360,9 @@ img {
    Important dates, event/venue cards
    (partials/sections/dates)
    ======================================== */
+#oldDate{
+  text-decoration: line-through;
+}
 
 /* Event Cards */
 .event-card {
